@@ -60,8 +60,11 @@ a:hover {
 }
 
 .logo {
-  font-size: 2rem;
+    display: flex;  
+    height: 50px;
+    width: 50px;
 }
+
 
 .logo:hover {
   cursor: default;
@@ -166,6 +169,7 @@ section {
 #profile {
   background-color: rgb(211, 196, 209);
   border-style: solid;
+  border-radius: 2rem;
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -320,6 +324,9 @@ section {
 /* Experience */
 
 #experience {
+  background-color: rgb(211, 196, 209);
+  border-style: solid;
+  border-radius: 2rem;
   position: relative;
 }
 
@@ -334,6 +341,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 1rem;
 }
 
 .article-container {
