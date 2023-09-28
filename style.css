@@ -2,6 +2,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -16,12 +21,14 @@ p {
 }
 
 /* Transition */
+
 a,
 .btn {
   transition: all 300ms ease;
 }
 
 /* desktop-nav */
+
 nav,
 .nav-links {
   display: flex;
@@ -157,6 +164,8 @@ section {
 /* Profile Section */
 
 #profile {
+  background-color: rgb(211, 196, 209);
+  border-style: solid;
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -286,14 +295,14 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(55, 55, 55) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
 
 .section-container {
   gap: 4rem;
-  height: 75%;
+  height: 80%;
 }
 
 .section__pic-container {
@@ -350,30 +359,29 @@ article .icon {
 /* Projects Section */
 
 #projects {
-    position: relative;
-  }
-  
-  .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-  }
-  
-  .project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-  }
-  
-  .project-title {
-    margin: 1rem;
-    color: black;
-  }
-  
-  .project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
-  }
+  position: relative;
+}
 
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
 /* Contact Section */
 
 #contact {
@@ -398,7 +406,7 @@ article .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem;
 }
 
