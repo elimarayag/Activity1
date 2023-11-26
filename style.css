@@ -199,7 +199,7 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   color: bisque;
 }
 
@@ -221,7 +221,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
-   border-radius: 2rem;
+  border-radius: 2rem;
 }
 
 /* Buttons */
@@ -339,7 +339,7 @@ section {
 .skills-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 400;
-  font-size: 1.50rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -420,8 +420,8 @@ article .icon {
   border: rgb(163, 163, 163) 0.1rem solid;
   border-color: black;
   background: rgb(230, 184, 162);
-  margin: .75rem;
-  padding: .1rem;
+  margin: 0.75rem;
+  padding: 0.1rem;
 }
 
 .contact-info-container {
@@ -429,7 +429,7 @@ article .icon {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: .25rem;
+  margin: 0.25rem;
 }
 
 .contact-icon {
