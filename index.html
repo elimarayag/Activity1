@@ -36,40 +36,34 @@
       </div>
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/ME.jpg" alt="Profile Picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello I am</p>
-        <h1 class="title">Elisha Marayag</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
+      <div class="profile-container">
+        <div class="profile-description">
+          <h2>About Me</h2>
+          <p>
+            Hi! I am Elisha B. Marayag.
+            Student from Technological University of the Philippines
+            taking Bachelor of Science in Information Systems.
+          </p>
+        </div>
+        <div class="profile-image-container">
+          <img src="./assets/ME1.jpg" alt="Profile Photo 1" class="profile-image" style="display: block;" />
+          <img src="./assets/ME2.jpg" alt="Profile Photo 2" class="profile-image" style="display: none;" />
+          <img src="./assets/ME3.jpg" alt="Profile Photo 3" class="profile-image" style="display: none;" />
+          <img src="./assets/ME4.jpg" alt="Profile Photo 4" class="profile-image" style="display: none;" />
+          <img src="./assets/ME5.jpg" alt="Profile Photo 5" class="profile-image" style="display: none;" />
+        </div>
+        <div class="profile-details">
+          <h2>Contact Me</h2>
+          <p>
+            Hello! This is my CV. You can access and download it by clicking
+            the button.
+          </p>
           <button
-            class="btn btn-color-2"
+            class="download-cv"
             onclick="window.open('./assets/marayag_cv.pdf')"
           >
             Download CV
           </button>
-          <button
-            class="btn btn-color-1"
-            onclick="location.href = './#contact'"
-          >
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My Linkedin Profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/elisha-marayag-47861b214/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github Profile"
-            class="icon"
-            onclick="location.href='https://github.com/elimarayag'"
-          />
         </div>
       </div>
     </section>
