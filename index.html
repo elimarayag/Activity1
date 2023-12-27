@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo"><img src="./assets/eli.gif" alt="logo"></div>
+      <div class="logo"><img src="./assets/eli" alt="logo"></div>
       <div>
         <ul class="nav-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -35,16 +35,11 @@
         </div>
       </div>
     </nav>
+    <div id="loader-container">
+      <div class="loader"></div>
+    </div>    
     <section id="profile">
       <div class="profile-container">
-        <div class="profile-description">
-          <h2>About Me</h2>
-          <p>
-            Hi! I am Elisha B. Marayag.
-            Student from Technological University of the Philippines
-            taking Bachelor of Science in Information Systems.
-          </p>
-        </div>
         <div class="profile-image-container">
           <img src="./assets/ME1.jpg" alt="Profile Photo 1" class="profile-image" style="display: block;" />
           <img src="./assets/ME2.jpg" alt="Profile Photo 2" class="profile-image" style="display: none;" />
@@ -52,174 +47,115 @@
           <img src="./assets/ME4.jpg" alt="Profile Photo 4" class="profile-image" style="display: none;" />
           <img src="./assets/ME5.jpg" alt="Profile Photo 5" class="profile-image" style="display: none;" />
         </div>
-        <div class="profile-details">
-          <h2>Contact Me</h2>
-          <p>
-            Hello! This is my CV. You can access and download it by clicking
-            the button.
-          </p>
-          <button
-            class="download-cv"
-            onclick="window.open('./assets/marayag_cv.pdf')"
-          >
-            Download CV
-          </button>
-        </div>
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get to Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/ME.jpg"
-            alt="About Picture"
-            class="about-pic"
-          />
+      <div class="about-container">
+        <div class="about-image">
+          <img src="./assets/ME1.jpg" alt="Left Photo" class="left-image" />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h2>Education</h2>
-              <p>
-                B.S in Information Systems<br />
-              </p>
-            </div>
+        <div class="about-description">
+          <h2>About Me</h2>
+          <p>
+            Hi! I am Elisha B. Marayag.
+            A student from Technological University of the Philippines
+            taking Bachelor of Science in Information Systems.
+            I am interested in music and arts. 
+          </p>
+        </div>
+        <div class="about-photos">
+          <div class="photo-gallery">
+            <img src="./assets/ART1.jpg" alt="Photo 1" class="gallery-image" />
+            <img src="./assets/ART2.jpg" alt="Photo 2" class="gallery-image" />
+            <img src="./assets/ART3.jpg" alt="Photo 3" class="gallery-image" />
+            <img src="./assets/ART4.jpg" alt="Photo 4" class="gallery-image" />
           </div>
-          <div class="text-container">
-            <p>
-              I am a student at TUP Manila taking Bachelor of Science in Information Systems <br />
-              An aspiring frontend Developer.
-            </p>
+          <div class="instagram-button">
+            <a href="https://www.instagram.com/eli.iz.art/" target="_blank" class="instagram-link">
+              Visit my Instagram
+            </a>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skills'"
-      />
     </section>
     <section id="skills">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="skills-details-container">
-          <div class="about-containers">
-            <!-- Move the .details-container inside .about-containers to create a row layout -->
-            <div class="details-container">
-              <h2 class="skills-sub-title">Programming Language</h2>
-              <div class="article-container">
-              <article>
-                <img
-                  src="./assets/c.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/c++.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/css.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/python.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/html.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
+      <p class="section__text__p1">Discover My</p>
+      <h1 class="title">Skills</h1>
+      <div class="skills-details-container">
+        <div class="details-container">
+          <h2 class="skills-sub-title">Programming Languages</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/Java.png" alt="JavaScript icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/python.jpg" alt="Python icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/html.png" alt="Python icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/css.png" alt="Python icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/c.png" alt="Python icon" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/c++.png" alt="Python icon" class="icon" />
+              <div>
+                <h3>C++</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
         </div>
-    </div>
-    <div class="details-container">
-      <h2 class="skills-sub-title">Adobe</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/photoshop.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Photoshop</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/illustrator.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Illustrator</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/animate.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Animate</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
+        <div class="details-container">
+          <h2 class="skills-sub-title">Adobe</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/photoshop.png" alt="HTML5 icon" class="icon" />
+              <div>
+                <h3>Photoshop</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/illustrator.png" alt="CSS3 icon" class="icon" />
+              <div>
+                <h3>Illustrator</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/animate.png" alt="CSS3 icon" class="icon" />
+              <div>
+                <h3>Animate</h3>
+                <p>Basic</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#works'"
-      />
     </section>
     <section id="works">
       <p class="section__text__p1">Browse My</p>
