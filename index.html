@@ -41,14 +41,16 @@
     <section id="profile">
       <div class="profile-container">
         <div class="profile-image-container">
+          <div class="profile-text">eli</div>
           <img src="./assets/ME1.jpg" alt="Profile Photo 1" class="profile-image" style="display: block;" />
           <img src="./assets/ME2.jpg" alt="Profile Photo 2" class="profile-image" style="display: none;" />
           <img src="./assets/ME3.jpg" alt="Profile Photo 3" class="profile-image" style="display: none;" />
           <img src="./assets/ME4.jpg" alt="Profile Photo 4" class="profile-image" style="display: none;" />
           <img src="./assets/ME5.jpg" alt="Profile Photo 5" class="profile-image" style="display: none;" />
+          <div class="profile-text">sha</div>
         </div>
       </div>
-    </section>
+    </section>    
     <section id="about">
       <div class="about-container">
         <div class="about-image">
@@ -79,8 +81,10 @@
       </div>
     </section>
     <section id="skills">
-      <p class="section__text__p1">Discover My</p>
-      <h1 class="title">Skills</h1>
+      <div class="skills-description">
+        <p>Discover My</p>
+        <h1>Skills</h1>
+      </div>
       <div class="skills-details-container">
         <div class="details-container">
           <h2 class="skills-sub-title">Programming Languages</h2>
@@ -158,97 +162,35 @@
       </div>
     </section>
     <section id="works">
-      <p class="section__text__p1">Browse My</p>
+      <p class="section__text__p1">Check Out My</p>
       <h1 class="title">Works</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/photoshop.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Photoshop Project "Movie Poster"</h2>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/logo illustrator.gif"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Logo using Adobe Illustrator</h2>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/crypt.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Cryptography with GUI</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/elimarayag/GUI.git'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/bus ticketing.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Bus Booking System</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/elimarayag/Bus_ticket.git'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
+      <div class="works-container">
+        <div class="work-container">
+          <img src="./assets/crypt.png" alt="Work 1" class="work-photo" />
+          <p class="work-description">Cryptography GUI using python</p>
+          <a href="https://github.com/elimarayag/GUI.git" class="github-button" target="_blank">GitHub</a>
+        </div>
+        <div class="work-container">
+          <img src="./assets/bus ticketing.png" alt="Work 2" class="work-photo" />
+          <p class="work-description">Bus Ticketing System</p>
+          <a href="https://github.com/elimarayag/Bus_ticket.git" class="github-button" target="_blank">GitHub</a>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:marayagelisha@gmail.com">marayagelisha@gmail.com</a></p>
+      <div class="contact-info-container">
+        <div class="contact-info">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p>Email: <a href="mailto:marayagelisha@gmail.com">marayagelisha@gmail.com</a></p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="Linkedin icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/elisha-marayag-47861b214/">Linkedin.com</a></p>
+        <div class="contact-info">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/elisha-marayag-47861b214/" target="_blank">linkedin.com/in/elisha-marayag</a></p>
         </div>
       </div>
-    </section>
+    </section>    
     <footer>
       <nav>
         <div class="nav-links-container">
