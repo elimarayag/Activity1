@@ -291,6 +291,14 @@ background-position: 100% 0;
 color: black;
 }
 
+.download-cv {
+  padding: 10px;
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+
 /*SKILLS SECTION*/
 #skills {
   background-color: rgb(245, 235, 224);
@@ -377,7 +385,7 @@ color: black;
 /*WORKS SECTION */
 
 #works {
-  background-color: rgb(181, 131, 141);
+  background-color: rgb(214, 204, 194);
   padding: 140px;
 }
 
