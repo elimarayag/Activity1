@@ -1,6 +1,6 @@
 /* style.css */
 body {
-  background-color: rgb(255, 205, 178);
+  background-color: rgb(245, 235, 224);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -177,8 +177,8 @@ a:hover {
 
 /*PROFILE SECTION*/
 #profile {
-  background-color: rgb(181, 131, 141);
-  padding: 80px;
+  background-color: rgb(214, 204, 194);
+  padding: 100px;
 }
 
 .profile-container {
@@ -206,10 +206,8 @@ a:hover {
 
 .profile-text {
   position: absolute;
-  font-size: 8rem;
-  font-family: Georgia;
-  font-weight: bold;
-  font-style: unset;
+  font-size: 7rem;
+  font-family: Cambria, Cochin, serif;
   color: whitesmoke;
   top: 50%;
   transform: translateY(-50%);
@@ -218,20 +216,20 @@ a:hover {
 }
 
 .profile-text:first-child {
-  left: -35%;
+  left: -85%;
   padding-right: 50%;
 }
 
 .profile-text:last-child {
-  right: -50%;
+  right: -120%;
   padding-left: 50%;
 }
 
 
 /*ABOUT SECTION*/
 #about {
-  background-color: rgb(181, 131, 141);
-  padding: 140px 20px;
+  background-color: rgb(245, 235, 224);
+  padding: 20px;
 }
 
 .about-container {
@@ -295,7 +293,7 @@ color: black;
 
 /*SKILLS SECTION*/
 #skills {
-  background-color: rgb(255, 205, 178);
+  background-color: rgb(245, 235, 224);
 }
 
 #skills h2 {
