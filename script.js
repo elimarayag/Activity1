@@ -5,6 +5,41 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+const profileSection = document.getElementById("profile");
+  const elishaText = document.getElementById("elisha");
+  const marayagText = document.getElementById("marayag");
+
+  let isScrollingUp = false;
+
+  function handleScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    if (scrollY > lastScrollY) {
+      isScrollingUp = false;
+    } else {
+      isScrollingUp = true;
+    }
+
+    lastScrollY = scrollY;
+
+    if (!isScrollingUp) {
+      elishaText.classList.add("fade-out");
+      marayagText.classList.add("fade-out");
+    } else {
+      const profileSectionTop = profileSection.offsetTop;
+      const profileSectionBottom = profileSectionTop + profileSection.offsetHeight;
+
+      if (scrollY >= profileSectionTop && scrollY <= profileSectionBottom) {
+        elishaText.classList.remove("fade-out");
+        marayagText.classList.remove("fade-out");
+      }
+    }
+  }
+
+  let lastScrollY = window.scrollY || window.pageYOffset;
+  window.addEventListener("scroll", handleScroll);
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const loaderContainer = document.getElementById("loader-container");
   loaderContainer.style.display = "flex";
