@@ -248,6 +248,7 @@ align-items: flex-start;
 .about-image {
 width: 45%;
 margin-bottom: 20px; 
+background-color: #e74c3c;
 }
 
 .left-image {
@@ -432,7 +433,7 @@ color: black;
 }
 
 
-
+/*WORKS SECTION*/
 #works {
   background-color: rgb(214, 204, 194);
   padding: 100px;
