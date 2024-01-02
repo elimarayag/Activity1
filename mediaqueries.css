@@ -58,24 +58,24 @@
 
   #profile {
     padding: 20px;
-    height: 33vh;
+    height: 55vh;
   }
 
   .profile-image-container {
-    width: 50%;
+    width: 70%;
   }
 
   .profile-text {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .profile-text:first-child {
-    left: -40%;
+    left: -35%;
     padding-right: 50%;
   }
   
   .profile-text:last-child {
-    right: -60%;
+    right: -50%;
     padding-left: 50%;
   }
 
