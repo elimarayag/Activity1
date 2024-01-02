@@ -143,25 +143,32 @@
   }
 
   .works-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .work-container {
-    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .work-photo {
     max-width: 100%;
+    margin: 0 auto; 
   }
 
   .work-description {
-    font-size: 1rem;
+    font-size: .5rem;
+    text-align: center; 
   }
 
   .github-button {
-    font-size: 14px;
+    width: 20px;
+    font-size: 10px;
     padding: 8px 16px;
+    display: block; 
+    margin-top: 10px; 
   }
 
   #contact {

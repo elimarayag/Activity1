@@ -258,8 +258,10 @@ width: 70%;
 }
 
 .about-description {
-width: 50%;
+width: 40%;
 color: black;
+margin-right: 20px;
+margin-left: 20px;
 }
 
 .about-photos {
@@ -277,7 +279,7 @@ margin-bottom: 10px;
 }
 
 .gallery-image {
-max-width: 100%;
+max-width: 90%;
 border-radius: 10%;
 margin-bottom: 10px; 
 width: 100%;
@@ -427,9 +429,9 @@ color: black;
 }
 
 @keyframes colorChange {
-  0% { color: #ff0000; }
-  50% { color: #00ff00; }
-  100% { color: #0000ff; }
+  0% { color: #7209B7; }
+  50% { color: #7CB518; }
+  100% { color: #F72585; }
 }
 
 
@@ -449,7 +451,7 @@ color: black;
 
 .works-container {
   display: flex;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-around; 
   align-items: flex-start;
   flex-wrap: wrap;
 }
