@@ -3,10 +3,6 @@
     height: 83vh;
     margin-bottom: 2rem;
   }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -18,14 +14,165 @@
     display: flex;
   }
 
-
 }
 
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 60vh;
+
+  #hamburger-nav {
+    z-index: 2;
+    position: relative;
   }
 
+  .menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300%;
+    max-width: 300px; 
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(45, 40, 62);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; 
+    overflow: visible; 
+  }
+
+  .menu-links.open {
+    max-height: 300px;
+  }
+
+  .hamburger-icon {
+    position: relative;
+    z-index: 4;
+  }
+
+  #profile {
+    padding: 20px;
+    height: 33vh;
+  }
+
+  .profile-image-container {
+    width: 50%;
+  }
+
+  .profile-text {
+    font-size: 2rem;
+  }
+
+  .profile-text:first-child {
+    left: -40%;
+    padding-right: 50%;
+  }
   
+  .profile-text:last-child {
+    right: -60%;
+    padding-left: 50%;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    width: 80%;
+  }
+
+  .about-description {
+    width: 80%;
+  }
+
+  .about-photos {
+    width: 80%;
+  }
+
+  .photo-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-image {
+    width: 100%;
+  }
+
+  .instagram-link {
+    font-size: 20px;
+  }
+
+  .download-cv {
+    font-size: 14px;
+  }
+
+  #skills h2 {
+    font-size: 1rem;
+  }
+
+  .skills-group {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .skills-group h3 {
+    font-size: 2rem;
+  }
+
+  .skills-group ul {
+    padding-left: 20px;
+  }
+
+  .skills-group li {
+    font-size: 1.5rem;
+  }
+
+  #works {
+    padding: 50px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .works-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-container {
+    flex: 0 0 100%;
+  }
+
+  .work-photo {
+    max-width: 100%;
+  }
+
+  .work-description {
+    font-size: 1rem;
+  }
+
+  .github-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #contact {
+    padding: 50px;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .contact-icon {
+    max-width: 20px;
+  }
 }
