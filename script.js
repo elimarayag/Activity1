@@ -43,35 +43,42 @@ document.addEventListener("DOMContentLoaded", function () {
   const aboutImage = document.querySelector(".left-image");
   let lastScrollY = window.scrollY;
 
+  function handleScrollAbout() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const scaleFactor = Math.max(1.5 - scrollY / window.innerHeight, 0.7); 
+
+    aboutImage.style.transform = `scale(${scaleFactor})`;
+  }
+
+  window.addEventListener("scroll", handleScrollAbout);
+
   function handleScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
 
     if (scrollY > lastScrollY) {
-        isScrollingUp = false;
+      isScrollingUp = false;
     } else {
-        isScrollingUp = true;
+      isScrollingUp = true;
     }
 
     lastScrollY = scrollY;
 
     if (!isScrollingUp) {
-        elishaText.classList.add("fade-out", "move-right");
-        marayagText.classList.add("fade-out", "move-right");
+      elishaText.classList.add("fade-out", "move-right");
+      marayagText.classList.add("fade-out", "move-right");
     } else {
-        const profileSectionTop = profileSection.offsetTop;
-        const profileSectionBottom = profileSectionTop + profileSection.offsetHeight;
+      const profileSectionTop = profileSection.offsetTop;
+      const profileSectionBottom = profileSectionTop + profileSection.offsetHeight;
 
-        if (scrollY >= profileSectionTop && scrollY <= profileSectionBottom) {
-            elishaText.classList.remove("fade-out", "move-right");
-            marayagText.classList.remove("fade-out", "move-right");
-        }
+      if (scrollY >= profileSectionTop && scrollY <= profileSectionBottom) {
+        elishaText.classList.remove("fade-out", "move-right");
+        marayagText.classList.remove("fade-out", "move-right");
+      }
     }
-
   }
 
   window.addEventListener("scroll", handleScroll);
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const loaderContainer = document.getElementById("loader-container");
@@ -102,6 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     showNextAboutImage();
-    setInterval(showNextAboutImage, 900);
-  }, 4000);
+    setInterval(showNextAboutImage, 700);
+  }, 3500);
 });
