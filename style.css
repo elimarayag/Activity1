@@ -239,7 +239,7 @@ a:hover {
 .profile-text {
   position: absolute;
   font-size: 7rem;
-  font-family: BlinkMacSystemFont;
+  font-family: 'Gill Sans';
   color: whitesmoke;
   top: 50%;
   transform: translateY(-50%);
