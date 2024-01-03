@@ -70,12 +70,12 @@
   }
 
   .profile-text:first-child {
-    left: -35%;
+    left: -25%;
     padding-right: 50%;
   }
   
   .profile-text:last-child {
-    right: -50%;
+    right: -40%;
     padding-left: 50%;
   }
 
@@ -111,6 +111,7 @@
 
   .download-cv {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 
   #skills h2 {
@@ -143,33 +144,33 @@
   }
 
   .works-container {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .work-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .work-container {
+    width: 100%; 
+  }
+
   .work-photo {
     max-width: 100%;
+    width: 150px;  
     margin: 0 auto; 
   }
 
   .work-description {
-    font-size: .5rem;
+    font-size: 1rem;
     text-align: center; 
   }
 
   .github-button {
-    width: 20px;
-    font-size: 10px;
+    width: 40px;
+    font-size: 14px;
     padding: 8px 16px;
     display: block; 
-    margin-top: 10px; 
+    margin: 10px auto; 
   }
+
 
   #contact {
     padding: 50px;
