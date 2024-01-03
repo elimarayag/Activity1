@@ -12,6 +12,7 @@ html {
 
 /* desktop-nav */
 #desktop-nav {
+  background-color: rgb(213, 189, 175);
   position: fixed;
   top: 0;
   width: 100%;
@@ -237,7 +238,7 @@ a:hover {
 
 .profile-text {
   position: absolute;
-  font-size: 7rem;
+  font-size: 9rem;
   font-family: 'Gill Sans';
   color: whitesmoke;
   top: 50%;
@@ -245,7 +246,7 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .profile-text:first-child {
@@ -260,6 +261,10 @@ a:hover {
 
 .profile-text.fade-out {
   opacity: 0;
+}
+
+.profile-text.move-right {
+  transform: translateX(100%);
 }
 
 /*ABOUT SECTION*/
@@ -558,7 +563,6 @@ color: black;
 /* FOOTER SECTION */
 
 footer {
-  background-color: rgb(45, 40, 62);
   display: flex;
   flex-direction: column;
   justify-content: center;

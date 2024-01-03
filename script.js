@@ -44,18 +44,29 @@ document.addEventListener("DOMContentLoaded", function () {
   let lastScrollY = window.scrollY;
 
   function handleScroll() {
-    const currentScrollY = window.scrollY;
+    const scrollY = window.scrollY || window.pageYOffset;
 
-    if (currentScrollY > lastScrollY) {
-      // Scrolling down
-      const scaleFactor = 1 - (currentScrollY / window.innerHeight) * 0.2;
-      aboutImage.style.transform = `scale(${scaleFactor})`;
+    if (scrollY > lastScrollY) {
+        isScrollingUp = false;
     } else {
-      // Scrolling up
-      aboutImage.style.transform = "scale(1)";
+        isScrollingUp = true;
     }
 
-    lastScrollY = currentScrollY;
+    lastScrollY = scrollY;
+
+    if (!isScrollingUp) {
+        elishaText.classList.add("fade-out", "move-right");
+        marayagText.classList.add("fade-out", "move-right");
+    } else {
+        const profileSectionTop = profileSection.offsetTop;
+        const profileSectionBottom = profileSectionTop + profileSection.offsetHeight;
+
+        if (scrollY >= profileSectionTop && scrollY <= profileSectionBottom) {
+            elishaText.classList.remove("fade-out", "move-right");
+            marayagText.classList.remove("fade-out", "move-right");
+        }
+    }
+
   }
 
   window.addEventListener("scroll", handleScroll);
