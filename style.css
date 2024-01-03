@@ -59,7 +59,6 @@ a:hover {
   width: 70px;
   height: 70px;
   cursor: pointer;
-  margin-left: 2rem;
 }
 
 .logo:hover {
@@ -209,7 +208,7 @@ a:hover {
 
 /*PROFILE SECTION*/
 #profile {
-  background-color: rgb(214, 204, 194);
+  background-color: rgb(213, 189, 175);
   padding: 100px;
   position: relative;
 }
@@ -341,7 +340,7 @@ color: black;
 
 /*SKILLS SECTION*/
 #skills {
-  background-color: rgb(214, 204, 194);
+  background-color: rgb(213, 189, 175);
 }
 
 #skills h2 {
