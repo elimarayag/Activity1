@@ -92,5 +92,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showNextAboutImage();
     setInterval(showNextAboutImage, 900);
-  }, 2000);
+  }, 4000);
 });
