@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleScrollAbout() {
     const scrollY = window.scrollY || window.pageYOffset;
-    const scaleFactor = Math.max(1.5 - scrollY / window.innerHeight, 0.7); 
+    const scaleFactor = Math.max(1 - scrollY / window.innerHeight, 0.4); 
 
     aboutImage.style.transform = `scale(${scaleFactor})`;
   }
