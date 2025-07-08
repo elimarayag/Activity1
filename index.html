@@ -7,6 +7,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   </head>
   <body>
     <nav id="desktop-nav">
@@ -52,55 +54,74 @@
     </div> 
     <section id="profile">
       <div class="profile-container">
-        <div class="profile-image-container">
-          <div class="profile-text" id="elisha">Elisha</div>
-          <img src="./assets/ME1.jpg" alt="Profile Photo 1" class="profile-image" style="display: block;" />
-          <img src="./assets/ME2.jpg" alt="Profile Photo 2" class="profile-image" style="display: none;" />
-          <img src="./assets/ME3.jpg" alt="Profile Photo 3" class="profile-image" style="display: none;" />
-          <img src="./assets/ME4.jpg" alt="Profile Photo 4" class="profile-image" style="display: none;" />
-          <img src="./assets/ME5.jpg" alt="Profile Photo 5" class="profile-image" style="display: none;" />
-          <div class="profile-text" id="marayag">Marayag</div>
-        </div>
-      </div>
-    </section>    
-    <section id="about">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="./assets/ME1.jpg" alt="Left Photo" class="left-image" />
-        </div>
-        <div class="about-description">
-          <h2>About Me</h2>
-          <p>
-            Hi! I am Elisha B. Marayag.
-            A student from Technological University of the Philippines
-            taking Bachelor of Science in Information Systems.
-            Aside from being a student, I am also an artist and here are
-            some of my works! You can see the rest of my works on instagram 
-            I provided below my works.
-            You can also access and download my cv by clicking the download cv button. 
-          </p>
-          <button
-            class="download-cv"
-            onclick="window.open('./assets/marayag_cv.pdf')"
-          >
-            Download CV
-          </button>
-        </div>
-        <div class="about-photos">
-          <div class="photo-gallery">
-            <img src="./assets/ART1.jpg" alt="Photo 1" class="gallery-image" />
-            <img src="./assets/ART2.jpg" alt="Photo 2" class="gallery-image" />
-            <img src="./assets/ART3.jpg" alt="Photo 3" class="gallery-image" />
-            <img src="./assets/ART4.jpg" alt="Photo 4" class="gallery-image" />
-          </div>
-          <div class="instagram-button">
-            <a href="https://www.instagram.com/eli.iz.art/" target="_blank" class="instagram-link">
-              Visit my Instagram
+        <div class="profile-left">
+          <img src="/assets/profile.jpg" alt="Elisha Marayag" class="profile-img" />
+          <div class="social-icons">
+            <a href="https://www.facebook.com/eliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" target="_blank" class="icon-link">
+              <i class="fab fa-facebook-f"></i>
             </a>
+            <a href="https://www.instagram.com/artbyelimenopii/" target="_blank" class="icon-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/elisha-marayag-47861b214/" target="_blank" class="icon-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          
+        </div>
+    
+        <div class="profile-right">
+          <p class="greeting">Hello Everyone 👋</p>
+          <h1>I'm Elisha Marayag</h1>
+          <h2>I am a <span class="role">Creative Developer</span></h2>
+    
+          <div class="details">
+            <p><span>📅</span> 01.16.2003</p>
+            <p><span>📞</span> 09569849369</p>
+            <p><span>✉️</span> marayagelisha@gmail.com</p>
+            <p><span>📍</span> Marikina City, Philippines</p>
+          </div>
+    
+          <p class="bio">
+            I'm a creative developer and visual artist specializing in websites, mobile applications, and UI design. I build clean, user-friendly digital experiences that blend functionality with visual impact. With a background in visual art, I bring a unique eye for detail and creativity to every project—whether I’m coding, designing interfaces, or crafting visual concepts. I love turning ideas into interactive, meaningful work.
+          </p>
+    
+          <h3>What I do</h3>
+            <div class="services">
+            <div>🌐 Web Sites and Platforms</div>
+            <div>📱 Mobile Applications</div>
+            <div>🎨 Arts and Creatives</div>
+            <div>🖌️ UI/UX</div>
+            <div>🖼️ Adobe Photoshop</div>
           </div>
         </div>
       </div>
     </section>
+       
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi! I'm a multidisciplinary creative who brings ideas to life through technology and visual storytelling. I specialize in websites and mobile applications, with a passion for building clean, functional, and user-friendly digital experiences. From front-end interfaces to interactive prototypes, I craft products that are not only beautiful but also meaningful and intuitive.
+          </p>
+          <p>
+            I have experience developing responsive websites and cross-platform mobile applications using modern frameworks and tools. Whether it's a sleek landing page, a fully functional e-commerce site, or a mobile app with seamless navigation, I ensure every project is built with performance, accessibility, and user experience in mind.
+          </p>
+          <p>
+            Beyond development, I have a strong eye for design. I can design user interfaces from scratch—focusing on usability, hierarchy, and visual harmony. I enjoy working with color, layout, and typography to create UI that’s not just usable, but delightful. My design process always starts with empathy: understanding the user, the problem, and how to solve it with thoughtful, elegant solutions.
+          </p>
+          <p>
+            What sets me apart is my background as a visual artist. Creativity is the thread that runs through everything I do. I’ve spent years exploring various forms of art—illustration, painting, digital media—which gives me a unique perspective when approaching design and development. My artistic background allows me to bring a strong sense of aesthetic and originality to every project I take on.
+          </p>
+        </div>
+    
+        <div class="about-image">
+          <img src="/assets/about-photo.jpg" alt="About Me Photo" />
+          <a href="/assets/Resume-Marayag.pdf" target="_blank" class="cv-button">Download CV</a>
+        </div>
+      </div>
+    </section>    
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-container">
@@ -139,7 +160,7 @@
         </div>
         <div class="work-container">
           <img src="./assets/crypt.png" alt="Cryptography" class="work-photo" />
-          <p class="work-description">Cryptography GUI using python</p>
+          <p class="work-description">Cryptography GUI using Python</p>
           <a href="https://github.com/elimarayag/GUI.git" class="github-button" target="_blank">GitHub</a>
         </div>
         <div class="work-container">
@@ -147,8 +168,13 @@
           <p class="work-description">Personal Interest Website</p>
           <a href="https://github.com/elimarayag/ACTIVITY_2_BSIS3A.git" class="github-button" target="_blank">GitHub</a>
         </div>
+        <div class="work-container">
+          <img src="/assets/capstone.png" alt="Capstone Project" class="work-photo" />
+          <p class="work-description">Capstone Project: EnergyA Fitness & Athletics</p>
+          <a href="https://energyafitness.com/" class="github-button" target="_blank">Click Here</a>
+        </div>
       </div>
-    </section>    
+    </section>       
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
