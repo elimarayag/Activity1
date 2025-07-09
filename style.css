@@ -546,7 +546,8 @@ a:hover {
 
 .work-photo {
   width: 100%;
-  height: auto;
+  height: 600px; /* Set same height for all images */
+  object-fit: cover; /* Ensures images fill the box without distortion */
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -574,6 +575,11 @@ a:hover {
 .github-button:hover {
   background-color: rgb(85, 85, 85);
 }
+
+.large-photo {
+  height: 180px;
+}
+
 
 /*CONTACT SECTION*/
 
