@@ -198,42 +198,35 @@
   }
 
   #works {
-    padding: 1px;
+    padding: 60px 20px;
+  }
+
+  .works-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .work-photo {
+    height: 200px; /* reduce height for smaller screens */
+
+  }
+
+  .large-photo {
+    height: 300px; /* slightly larger than standard work-photo */
   }
 
   .title {
     font-size: 2rem;
   }
 
-  .works-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .work-container {
-    width: 100%; 
-  }
-
-  .work-photo {
-    max-width: 100%;
-    width: 150px;  
-    margin: 0 auto; 
-  }
-
   .work-description {
-    font-size: 1rem;
-    text-align: center; 
+    font-size: 0.9rem;
   }
 
   .github-button {
-    width: 40px;
-    font-size: 14px;
+    font-size: 0.9rem;
     padding: 8px 16px;
-    display: block; 
-    margin: 10px auto; 
   }
-
-
   #contact {
     padding: 50px;
   }
