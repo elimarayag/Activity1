@@ -215,6 +215,18 @@
     height: 300px; /* slightly larger than standard work-photo */
   }
 
+  .works-container {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image-container {
+    height: 280px;
+  }
+
+  .wide-work .work-image-container {
+    height: 200px;
+  }
+
   .title {
     font-size: 2rem;
   }
@@ -231,6 +243,7 @@
   .visual-art-container {
     grid-template-columns: 1fr;
   }
+
 
   #contact {
     padding: 50px;

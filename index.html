@@ -17,8 +17,10 @@
       </div>
       <div>
         <ul class="nav-links">
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
           <li><a href="#works" onclick="toggleMenu()">Works</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
@@ -35,6 +37,7 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
@@ -153,55 +156,56 @@
         <div class="art-box">
           <img src="./assets/art1.jpg" alt="Artwork 1" class="art-image" />
           <div class="art-description">
-            <p>Abstract ink portrait exploring emotion and identity.</p>
+            <p>Awake: trying to stay awake and remember every real thing that happened.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art2.jpg" alt="Artwork 2" class="art-image" />
           <div class="art-description">
-            <p>Mixed media on canvas: urban noise and color study.</p>
+            <p>I tried drowning my emotions through drinking and smoking, but nothing worked. Nothing made me feel better; it all made me feel worse. I guess that's the thing about being sick—nothing you do will ever make it go away. It feels like you're stuck in a cycle, desperately searching for an escape that doesn't exist. And the more you try, the deeper you sink into the darkness.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art3.jpg" alt="Artwork 3" class="art-image" />
           <div class="art-description">
-            <p>Monochrome digital sketch inspired by mythology.</p>
+            <p>Echohead: a head full of echoes, repeating thoughts, or voices that refuse to fade away</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art4.jpg" alt="Artwork 4" class="art-image" />
           <div class="art-description">
-            <p>Minimalist line art study of motion and form.</p>
+            <p>Underneath: what lives inside. The real part, waiting, watching, rising.
+            </p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art5.jpg" alt="Artwork 5" class="art-image" />
           <div class="art-description">
-            <p>Black and white emotional expression using graphite.</p>
+            <p>Spillpoint: not a meltdown from rage but one from exhaustion. The kind you don't come back from easily.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art6.jpg" alt="Artwork 6" class="art-image" />
           <div class="art-description">
-            <p>Experimental texture work in digital format.</p>
+            <p>Snapped: he used to fake it. now it’s real and deadly.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art7.jpg" alt="Artwork 7" class="art-image" />
           <div class="art-description">
-            <p>Nature-inspired ink wash illustration.</p>
+            <p>A figure dissolves into the background, his form fading with each tear that falls. The tears don’t just express sorrow—they transform him, blending his being into the very fabric behind him. Slowly, he becomes part of the silence he once stood against.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art8.jpg" alt="Artwork 8" class="art-image" />
           <div class="art-description">
-            <p>Dreamlike figure rendered in grayscale and gold ink.</p>
+            <p>A series of eyes stare out from the canvas, each one a window into a different storm—rage, sorrow, joy, fear, and hope flicker in shifting reflections. No words are spoken, yet the eyes scream, whisper, ache, and shine, capturing the raw chaos of being human.</p>
           </div>
         </div>
         <div class="art-box">
           <img src="./assets/art9.jpg" alt="Artwork 9" class="art-image" />
           <div class="art-description">
-            <p>Digital surrealism blending organic and synthetic forms.</p>
+            <p>A lone skull rests in the center, not lifeless but hauntingly expressive. Cracks and shadows form subtle shapes—echoes of laughter, pain, and longing—as if the remnants of emotion still cling to the bone. It is death, yes, but not silent—it's memory carved in calcium.</p>
           </div>
         </div>
       </div>
@@ -210,31 +214,67 @@
       <p class="section__text__p1">My other</p>
       <h1 class="title">Works</h1>
       <div class="works-container">
-        <div class="work-container">
-          <img src="./assets/logo_illustrator.png" alt="illustrator" class="work-photo" />
-          <p class="work-description">Logo using the Adobe Illustrator</p>
+        <!-- First row (3 standard works) -->
+        <div class="work-box">
+          <div class="work-image-container">
+            <img src="./assets/logo_illustrator.png" alt="illustrator" class="work-photo" />
+            <div class="work-description-hover">
+              <p>Logo using the Adobe Illustrator</p>
+            </div>
+          </div>
         </div>
-        <div class="work-container">
-          <img src="./assets/photoshop.jpg" alt="photoshop" class="work-photo" />
-          <p class="work-description">Movie Poster using Adobe Photoshop</p>
+    
+        <div class="work-box">
+          <div class="work-image-container">
+            <img src="./assets/photoshop.jpg" alt="photoshop" class="work-photo" />
+            <div class="work-description-hover">
+              <p>Movie Poster using Adobe Photoshop</p>
+            </div>
+          </div>
         </div>
-        <div class="work-container">
-          <img src="./assets/crypt.png" alt="Cryptography" class="work-photo" />
-          <p class="work-description">Cryptography GUI using Python</p>
+    
+        <div class="work-box">
+          <div class="work-image-container">
+            <img src="./assets/crypt.png" alt="Cryptography" class="work-photo" />
+            <div class="work-description-hover">
+              <p>Cryptography GUI using Python</p>
+            </div>
+          </div>
           <a href="https://github.com/elimarayag/GUI.git" class="github-button" target="_blank">GitHub</a>
         </div>
-        <div class="work-container featured-work">
-          <img src="./assets/workRR1.png" alt="Website" class="work-photo large-photo" />
-          <p class="work-description">Personal Interest Website</p>
+    
+        <!-- Second row (landscape works with wider width) -->
+        <div class="work-box wide-work">
+          <div class="work-image-container">
+            <img src="./assets/workRR1.png" alt="Website" class="work-photo" />
+            <div class="work-description-hover">
+              <p>Personal Interest Website</p>
+            </div>
+          </div>
           <a href="https://github.com/elimarayag/ACTIVITY_2_BSIS3A.git" class="github-button" target="_blank">GitHub</a>
         </div>
-        <div class="work-container featured-work">
-          <img src="/assets/capstone.png" alt="Capstone Project" class="work-photo large-photo" />
-          <p class="work-description">Capstone Project: EnergyA Fitness & Athletics</p>
+    
+        <div class="work-box wide-work">
+          <div class="work-image-container">
+            <img src="/assets/capstone.png" alt="Capstone Project" class="work-photo" />
+            <div class="work-description-hover">
+              <p>Capstone Project: EnergyA Fitness & Athletics</p>
+            </div>
+          </div>
           <a href="https://energyafitness.com/" class="github-button" target="_blank">Click Here</a>
         </div>
+    
+        <div class="work-box wide-work">
+          <div class="work-image-container">
+            <img src="/assets/todolist.png" alt="Landscape Work" class="work-photo" />
+            <div class="work-description-hover">
+              <p>To do list using react.js.</p>
+            </div>
+          </div>
+          <a href="https://github.com/elimarayag/todolistapp.git" class="github-button" target="_blank">GitHub</a>
+        </div>
       </div>
-    </section>   
+    </section>        
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -253,6 +293,7 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
+            <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
             <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
