@@ -227,6 +227,11 @@
     font-size: 0.9rem;
     padding: 8px 16px;
   }
+
+  .visual-art-container {
+    grid-template-columns: 1fr;
+  }
+
   #contact {
     padding: 50px;
   }
