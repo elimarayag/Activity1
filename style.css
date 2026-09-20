@@ -499,6 +499,41 @@ a:hover {
    ARTWORK MODAL
    ========================= */
 
+   .modal-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 25px;
+
+  flex-wrap: wrap;
+}
+
+.project-button {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border: 1px solid white;
+  border-radius: 6px;
+
+  background: transparent;
+  color: white;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.project-button:hover {
+  background: white;
+  color: black;
+}
+
 .art-modal {
   display: none;
   position: fixed;
@@ -570,12 +605,12 @@ a:hover {
 
 .github-button {
   text-decoration: none;
-  background-color: #1c1c1c;
-  color: white;
+  background-color: hsl(0, 16%, 96%)0%, 11%);
+  color: black;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 30px;
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 25px;
   transition: background-color 0.3s ease;
 }
 

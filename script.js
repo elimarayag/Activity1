@@ -279,258 +279,189 @@ document.addEventListener(
    WORKS / INSTAGRAM STYLE POPUP
 ======================================== */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    /* Get every project */
+  const projects = document.querySelectorAll(".work-image-container");
 
-    const projects =
-      document.querySelectorAll(
-        ".work-image-container"
-      );
+  const modal = document.getElementById("artModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDetails = document.getElementById("modalDetails");
+  const modalDescription = document.getElementById("modalDescription");
 
+  // TWO SEPARATE BUTTONS
+  const modalWebsite = document.getElementById("modalWebsite");
+  const modalGithub = document.getElementById("modalGithub");
 
-    /* Get popup elements */
-
-    const modal =
-      document.getElementById(
-        "artModal"
-      );
-
-    const modalImage =
-      document.getElementById(
-        "modalImage"
-      );
-
-    const modalTitle =
-      document.getElementById(
-        "modalTitle"
-      );
-
-    const modalDetails =
-      document.getElementById(
-        "modalDetails"
-      );
-
-    const modalDescription =
-      document.getElementById(
-        "modalDescription"
-      );
-
-    const modalLink =
-      document.getElementById(
-        "modalLink"
-      );
-
-    const modalClose =
-      document.getElementById(
-        "modalClose"
-      );
+  const modalClose = document.getElementById("modalClose");
 
 
-    /*
-      Stop if the modal doesn't exist.
-
-      This prevents errors from breaking
-      your other JavaScript.
-    */
-
-    if (!modal) {
-      return;
-    }
+  if (!modal) {
+    return;
+  }
 
 
-    /* ==================================
-       CLICK PROJECT
-    ================================== */
+  /* ========================================
+     CLICK PROJECT
+  ======================================== */
 
-    projects.forEach(
-      function (project) {
+  projects.forEach(function (project) {
 
-        /* Makes it obviously clickable */
-
-        project.style.cursor = "pointer";
+    project.style.cursor = "pointer";
 
 
-        project.addEventListener(
-          "click",
-          function () {
+    project.addEventListener("click", function () {
 
-            /* Get information from HTML */
+      /* Get project information */
 
-            const image =
-              this.dataset.image;
+      const image = this.dataset.image;
+      const title = this.dataset.title;
+      const details = this.dataset.details;
+      const description = this.dataset.description;
 
-            const title =
-              this.dataset.title;
-
-            const details =
-              this.dataset.details;
-
-            const description =
-              this.dataset.description;
-
-            const link =
-              this.dataset.link;
-
-            const button =
-              this.dataset.button;
+      const website = this.dataset.website;
+      const github = this.dataset.github;
 
 
-            /* Insert information */
+      /* PROJECT IMAGE */
 
-            if (modalImage) {
-              modalImage.src =
-                image || "";
-            }
-
-
-            if (modalTitle) {
-              modalTitle.textContent =
-                title || "";
-            }
-
-
-            if (modalDetails) {
-              modalDetails.textContent =
-                details || "";
-            }
-
-
-            if (modalDescription) {
-              modalDescription.textContent =
-                description || "";
-            }
-
-
-            /* ==========================
-               PROJECT LINK
-            ========================== */
-
-            if (modalLink) {
-
-              if (link) {
-
-                modalLink.href = link;
-
-                modalLink.textContent =
-                  button ||
-                  "View Project";
-
-                modalLink.style.display =
-                  "inline-block";
-
-              } else {
-
-                modalLink.style.display =
-                  "none";
-
-              }
-
-            }
-
-
-            /* ==========================
-               OPEN POPUP
-            ========================== */
-
-            modal.classList.add(
-              "active"
-            );
-
-
-            /* Stop page behind modal
-               from scrolling */
-
-            document.body.style.overflow =
-              "hidden";
-
-          }
-        );
-
+      if (modalImage) {
+        modalImage.src = image || "";
       }
-    );
 
 
-    /* ==================================
-       CLOSE BUTTON
-    ================================== */
+      /* PROJECT TITLE */
 
-    if (modalClose) {
-
-      modalClose.addEventListener(
-        "click",
-        function () {
-
-          closeProjectModal();
-
-        }
-      );
-
-    }
+      if (modalTitle) {
+        modalTitle.textContent = title || "";
+      }
 
 
-    /* ==================================
-       CLICK OUTSIDE MODAL
-    ================================== */
+      /* PROJECT DETAILS */
 
-    modal.addEventListener(
-      "click",
-      function (event) {
+      if (modalDetails) {
+        modalDetails.textContent = details || "";
+      }
 
-        /*
-          Only close when the dark
-          background itself is clicked.
-        */
 
-        if (event.target === modal) {
+      /* PROJECT DESCRIPTION */
 
-          closeProjectModal();
+      if (modalDescription) {
+        modalDescription.textContent = description || "";
+      }
+
+
+      /* ========================================
+         WEBSITE BUTTON
+      ======================================== */
+
+      if (modalWebsite) {
+
+        if (website) {
+
+          modalWebsite.href = website;
+
+          modalWebsite.style.display = "inline-block";
+
+        } else {
+
+          modalWebsite.style.display = "none";
 
         }
 
       }
-    );
 
 
-    /* ==================================
-       ESC KEY
-    ================================== */
+      /* ========================================
+         GITHUB BUTTON
+      ======================================== */
 
-    document.addEventListener(
-      "keydown",
-      function (event) {
+      if (modalGithub) {
 
-        if (
-          event.key === "Escape" &&
-          modal.classList.contains(
-            "active"
-          )
-        ) {
+        if (github) {
 
-          closeProjectModal();
+          modalGithub.href = github;
+
+          modalGithub.style.display = "inline-block";
+
+        } else {
+
+          modalGithub.style.display = "none";
 
         }
 
       }
-    );
 
 
-    /* ==================================
-       CLOSE FUNCTION
-    ================================== */
+      /* OPEN MODAL */
 
-    function closeProjectModal() {
+      modal.classList.add("active");
 
-      modal.classList.remove(
-        "active"
-      );
+      document.body.style.overflow = "hidden";
 
-      document.body.style.overflow =
-        "";
+    });
 
-    }
+  });
+
+
+  /* ========================================
+     CLOSE BUTTON
+  ======================================== */
+
+  if (modalClose) {
+
+    modalClose.addEventListener("click", function () {
+
+      closeProjectModal();
+
+    });
 
   }
-);
+
+
+  /* ========================================
+     CLICK OUTSIDE MODAL
+  ======================================== */
+
+  modal.addEventListener("click", function (event) {
+
+    if (event.target === modal) {
+
+      closeProjectModal();
+
+    }
+
+  });
+
+
+  /* ========================================
+     ESC KEY
+  ======================================== */
+
+  document.addEventListener("keydown", function (event) {
+
+    if (
+      event.key === "Escape" &&
+      modal.classList.contains("active")
+    ) {
+
+      closeProjectModal();
+
+    }
+
+  });
+
+
+  /* ========================================
+     CLOSE MODAL
+  ======================================== */
+
+  function closeProjectModal() {
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+  }
+
+});
