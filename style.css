@@ -429,64 +429,144 @@ a:hover {
   text-align: center;
 }
 
-.title {
+#works .title {
   font-weight: 700;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
 }
 
+/* Instagram-style grid */
 .works-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 4px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-/* First row (square/portrait size) */
 .work-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
+/* Square Instagram post */
 .work-image-container {
   position: relative;
   width: 100%;
-  height: 600px; /* Fixed height for 1st row */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 12px;
-  background-color: #1c1c1c;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  background: #1c1c1c;
+  cursor: pointer;
 }
 
 .work-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-.work-image-container:hover .work-photo {
-  transform: scale(1.05);
-}
-
+/* Dark overlay */
 .work-description-hover {
   position: absolute;
-  bottom: 0;
-  background-color: rgba(13, 13, 13, 0.95);
-  color: #fff;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 20px;
-  width: 100%;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+
   text-align: center;
   font-size: 0.95rem;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .work-image-container:hover .work-description-hover {
-  transform: translateY(0);
+  opacity: 1;
 }
+
+.work-image-container:hover .work-photo {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   ARTWORK MODAL
+   ========================= */
+
+.art-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.9);
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.art-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+
+  background: #111;
+  color: white;
+
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* Large artwork */
+.modal-image {
+  width: 65%;
+  object-fit: contain;
+  background: black;
+}
+
+/* Artwork information */
+.modal-info {
+  width: 35%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.modal-info h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.modal-info p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  color: white;
+  font-size: 40px;
+
+  cursor: pointer;
+}
+
 
 .github-button {
   text-decoration: none;

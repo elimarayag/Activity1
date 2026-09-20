@@ -201,70 +201,196 @@
       </div>
     </section>
     <section id="works">
-      <p class="section__text__p1">My other</p>
-      <h1 class="title">Works</h1>
-      <div class="works-container">
-        <!-- First row (3 standard works) -->
-        <div class="work-box">
-          <div class="work-image-container">
-            <img src="./assets/logo_illustrator.png" alt="illustrator" class="work-photo" />
-            <div class="work-description-hover">
-              <p>Logo using the Adobe Illustrator</p>
-            </div>
-          </div>
+      <script src="script.js"></script>
+
+  <p class="section__text__p1">My other</p>
+  <h1 class="title">Works</h1>
+  <div class="works-container">
+
+    <!-- Photoshop -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/photoshop.jpg"
+           data-title="Movie Poster"
+           data-details="Adobe Photoshop"
+           data-description="A movie poster designed using Adobe Photoshop.">
+
+        <img
+          src="./assets/photoshop.jpg"
+          alt="Photoshop Movie Poster"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
         </div>
-    
-        <div class="work-box">
-          <div class="work-image-container">
-            <img src="./assets/photoshop.jpg" alt="photoshop" class="work-photo" />
-            <div class="work-description-hover">
-              <p>Movie Poster using Adobe Photoshop</p>
-            </div>
-          </div>
-        </div>
-    
-        <div class="work-box">
-          <div class="work-image-container">
-            <img src="./assets/crypt.png" alt="Cryptography" class="work-photo" />
-            <div class="work-description-hover">
-              <p>Cryptography GUI using Python</p>
-            </div>
-          </div>
-          <a href="https://github.com/elimarayag/GUI.git" class="github-button" target="_blank">GitHub</a>
-        </div>
-    
-        <!-- Second row (landscape works with wider width) -->
-        <div class="work-box wide-work">
-          <div class="work-image-container">
-            <img src="./assets/workRR1.png" alt="Website" class="work-photo" />
-            <div class="work-description-hover">
-              <p>Personal Interest Website</p>
-            </div>
-          </div>
-          <a href="https://github.com/elimarayag/ACTIVITY_2_BSIS3A.git" class="github-button" target="_blank">GitHub</a>
-        </div>
-    
-        <div class="work-box wide-work">
-          <div class="work-image-container">
-            <img src="/assets/capstone.png" alt="Capstone Project" class="work-photo" />
-            <div class="work-description-hover">
-              <p>Capstone Project: EnergyA Fitness & Athletics</p>
-            </div>
-          </div>
-          <a href="https://energyafitness.com/" class="github-button" target="_blank">Click Here</a>
-        </div>
-    
-        <div class="work-box wide-work">
-          <div class="work-image-container">
-            <img src="/assets/todolist.png" alt="Landscape Work" class="work-photo" />
-            <div class="work-description-hover">
-              <p>To do list using react.js.</p>
-            </div>
-          </div>
-          <a href="https://github.com/elimarayag/todolistapp.git" class="github-button" target="_blank">GitHub</a>
-        </div>
+
       </div>
-    </section>        
+    </div>
+
+    <!-- Cryptography -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/crypt.png"
+           data-title="Cryptography GUI"
+           data-details="Python"
+           data-description="A cryptography graphical user interface created using Python."
+           data-link="https://github.com/elimarayag/GUI.git"
+           data-button="View on GitHub">
+
+        <img
+          src="./assets/crypt.png"
+          alt="Cryptography GUI"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Personal Interest Website -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/workRR1.png"
+           data-title="Personal Interest Website"
+           data-details="Web Development"
+           data-description="A personal interest website created as a web development project."
+           data-link="https://github.com/elimarayag/ACTIVITY_2_BSIS3A.git"
+           data-button="View on GitHub">
+
+        <img
+          src="./assets/workRR1.png"
+          alt="Personal Interest Website"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Capstone -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/capstone.png"
+           data-title="EnergyA Fitness & Athletics"
+           data-details="Capstone Project"
+           data-description="A web-based fitness and athletics center management system developed as a capstone project."
+           data-link="https://energyafitness.com/"
+           data-button="Visit Website">
+
+        <img
+          src="./assets/capstone.png"
+          alt="EnergyA Fitness & Athletics"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- To Do List -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/todolist.png"
+           data-title="To-Do List App"
+           data-details="React.js"
+           data-description="A simple and interactive to-do list application created using React.js."
+           data-link="https://github.com/elimarayag/todolistapp.git"
+           data-button="View on GitHub">
+
+        <img
+          src="./assets/todolist.png"
+          alt="React To-Do List"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- HYE -->
+    <div class="work-box">
+      <div class="work-image-container"
+           data-image="./assets/hye.png"
+           data-title="HYE Enterprise Corp Website"
+           data-details="Web Development"
+           data-description="A company website developed for HYE Enterprise Corp."
+           data-link="https://github.com/elimarayag/HYEWEBSITE.git"
+           data-button="View on GitHub">
+
+        <img
+          src="./assets/hye.png"
+          alt="HYE Enterprise Corp Website"
+          class="work-photo"
+        />
+
+        <div class="work-description-hover">
+          <p>View Project</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- POPUP -->
+  <div class="art-modal" id="artModal">
+
+    <span class="modal-close" id="modalClose">&times;</span>
+
+    <div class="modal-content">
+
+      <div class="modal-image-container">
+        <img
+          src=""
+          id="modalImage"
+          class="modal-image"
+          alt="Project Preview"
+        />
+      </div>
+
+      <div class="modal-info">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDetails" class="modal-details"></p>
+
+        <p id="modalDescription"></p>
+
+        <a
+          href="#"
+          id="modalLink"
+          class="github-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
