@@ -1,112 +1,103 @@
+/* =========================================================
+   ELISHA MARAYAG PORTFOLIO
+   MAIN JAVASCRIPT
+   Works across all portfolio pages
+========================================================= */
+
+
+/* =========================================================
+   HAMBURGER MENU
+========================================================= */
+
 function toggleMenu() {
+
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
 
-  if (menu && icon) {
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
-}
-
-
-/* ========================================
-   PROFILE SCROLL ANIMATION
-======================================== */
-
-const profileSection = document.getElementById("profile");
-const elishaText = document.getElementById("elisha");
-const marayagText = document.getElementById("marayag");
-
-let isScrollingUp = false;
-let lastScrollY = 0;
-
-function handleScroll() {
-  const scrollY = window.scrollY || window.pageYOffset;
-
-  if (scrollY > lastScrollY) {
-    isScrollingUp = false;
-  } else {
-    isScrollingUp = true;
-  }
-
-  lastScrollY = scrollY;
-
-  if (!profileSection || !elishaText || !marayagText) {
+  if (!menu || !icon) {
     return;
   }
 
-  if (!isScrollingUp) {
-    elishaText.classList.add("fade-out");
-    marayagText.classList.add("fade-out");
-  } else {
-    const profileSectionTop = profileSection.offsetTop;
-    const profileSectionBottom =
-      profileSectionTop + profileSection.offsetHeight;
-
-    if (
-      scrollY >= profileSectionTop &&
-      scrollY <= profileSectionBottom
-    ) {
-      elishaText.classList.remove("fade-out");
-      marayagText.classList.remove("fade-out");
-    }
-  }
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
 }
 
-document.addEventListener("scroll", handleScroll);
+
+/* =========================================================
+   CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener("click", function (event) {
+
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+  if (!menu || !icon || !hamburgerMenu) {
+    return;
+  }
+
+  if (
+    menu.classList.contains("open") &&
+    !hamburgerMenu.contains(event.target)
+  ) {
+
+    menu.classList.remove("open");
+    icon.classList.remove("open");
+
+  }
+
+});
 
 
-/* ========================================
-   ABOUT IMAGE SCROLL ANIMATION
-======================================== */
+/* =========================================================
+   PROFILE / HOME PAGE
+   Runs only when #profile exists
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const aboutImage = document.querySelector(".left-image");
+  const profileSection = document.getElementById("profile");
 
-  let lastScrollY = window.scrollY;
+  const elishaText = document.getElementById("elisha");
+  const marayagText = document.getElementById("marayag");
 
-  function handleScrollAbout() {
-    if (!aboutImage) return;
+  /*
+     If this isn't index.html,
+     stop the Profile-specific JavaScript.
+  */
 
-    const scrollY =
-      window.scrollY || window.pageYOffset;
-
-    const scaleFactor = Math.max(
-      1 - scrollY / window.innerHeight,
-      0.4
-    );
-
-    aboutImage.style.transform =
-      `scale(${scaleFactor})`;
+  if (!profileSection) {
+    return;
   }
 
-  window.addEventListener(
-    "scroll",
-    handleScrollAbout
-  );
+
+  let lastScrollY = window.scrollY;
 
 
   function handleProfileScroll() {
 
+    /*
+       Your current HTML doesn't appear to contain
+       #elisha and #marayag.
+
+       This check prevents JavaScript errors.
+    */
+
+    if (!elishaText || !marayagText) {
+      return;
+    }
+
+
     const scrollY =
       window.scrollY || window.pageYOffset;
 
-    if (scrollY > lastScrollY) {
-      isScrollingUp = false;
-    } else {
-      isScrollingUp = true;
-    }
+
+    const isScrollingUp =
+      scrollY < lastScrollY;
+
 
     lastScrollY = scrollY;
-
-    if (
-      !profileSection ||
-      !elishaText ||
-      !marayagText
-    ) {
-      return;
-    }
 
 
     if (!isScrollingUp) {
@@ -147,8 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
       }
+
     }
+
   }
+
 
   window.addEventListener(
     "scroll",
@@ -158,310 +152,513 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* ========================================
-   LOADING SCREEN + IMAGE SLIDESHOW
-======================================== */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-
-    const loaderContainer =
-      document.getElementById(
-        "loader-container"
-      );
-
-
-    if (loaderContainer) {
-
-      loaderContainer.style.display = "flex";
-
-      setTimeout(function () {
-
-        loaderContainer.style.display =
-          "none";
-
-
-        /* PROFILE IMAGES */
-
-        let currentIndexProfile = 0;
-
-        const profileImages =
-          document.querySelectorAll(
-            ".profile-image"
-          );
-
-
-        function showNextProfileImage() {
-
-          if (profileImages.length === 0) {
-            return;
-          }
-
-          profileImages[
-            currentIndexProfile
-          ].style.display = "none";
-
-          currentIndexProfile =
-            (currentIndexProfile + 1) %
-            profileImages.length;
-
-          profileImages[
-            currentIndexProfile
-          ].style.display = "block";
-
-        }
-
-
-        if (profileImages.length > 0) {
-
-          showNextProfileImage();
-
-          setInterval(
-            showNextProfileImage,
-            500
-          );
-
-        }
-
-
-        /* ABOUT IMAGES */
-
-        let currentIndexAbout = 0;
-
-        const aboutImages =
-          document.querySelectorAll(
-            ".gallery-image"
-          );
-
-
-        function showNextAboutImage() {
-
-          if (aboutImages.length === 0) {
-            return;
-          }
-
-          aboutImages[
-            currentIndexAbout
-          ].style.display = "none";
-
-          currentIndexAbout =
-            (currentIndexAbout + 1) %
-            aboutImages.length;
-
-          aboutImages[
-            currentIndexAbout
-          ].style.display = "block";
-
-        }
-
-
-        if (aboutImages.length > 0) {
-
-          showNextAboutImage();
-
-          setInterval(
-            showNextAboutImage,
-            700
-          );
-
-        }
-
-      }, 3500);
-
-    }
-
-  }
-);
-
-
-/* ========================================
-   WORKS / INSTAGRAM STYLE POPUP
-======================================== */
+/* =========================================================
+   ABOUT PAGE
+   Runs only when About elements exist
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const projects = document.querySelectorAll(".work-image-container");
+  const aboutSection =
+    document.getElementById("about");
 
-  const modal = document.getElementById("artModal");
-  const modalImage = document.getElementById("modalImage");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalDetails = document.getElementById("modalDetails");
-  const modalDescription = document.getElementById("modalDescription");
+  if (!aboutSection) {
+    return;
+  }
 
-  // TWO SEPARATE BUTTONS
-  const modalWebsite = document.getElementById("modalWebsite");
-  const modalGithub = document.getElementById("modalGithub");
 
-  const modalClose = document.getElementById("modalClose");
+  const aboutImage =
+    document.querySelector(".left-image");
 
+
+  /*
+     Your current about.html uses .about-image,
+     not .left-image.
+
+     This is kept here in case you still use
+     .left-image somewhere in your design.
+  */
+
+  if (!aboutImage) {
+    return;
+  }
+
+
+  function handleAboutScroll() {
+
+    const scrollY =
+      window.scrollY || window.pageYOffset;
+
+
+    const scaleFactor =
+      Math.max(
+        1 - scrollY / window.innerHeight,
+        0.4
+      );
+
+
+    aboutImage.style.transform =
+      `scale(${scaleFactor})`;
+
+  }
+
+
+  window.addEventListener(
+    "scroll",
+    handleAboutScroll
+  );
+
+});
+
+
+/* =========================================================
+   LOADING SCREEN
+   Runs only on index.html because only index has the loader
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const loaderContainer =
+    document.getElementById("loader-container");
+
+
+  /*
+     Other pages don't have a loader.
+     Stop here on those pages.
+  */
+
+  if (!loaderContainer) {
+    return;
+  }
+
+
+  loaderContainer.style.display = "flex";
+
+
+  setTimeout(function () {
+
+    loaderContainer.style.display = "none";
+
+  }, 3500);
+
+});
+
+
+/* =========================================================
+   PROFILE IMAGE SLIDESHOW
+   Only runs if .profile-image elements exist
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const profileImages =
+    document.querySelectorAll(".profile-image");
+
+
+  if (profileImages.length <= 1) {
+    return;
+  }
+
+
+  let currentIndexProfile = 0;
+
+
+  function showNextProfileImage() {
+
+    profileImages[
+      currentIndexProfile
+    ].style.display = "none";
+
+
+    currentIndexProfile =
+      (currentIndexProfile + 1) %
+      profileImages.length;
+
+
+    profileImages[
+      currentIndexProfile
+    ].style.display = "block";
+
+  }
+
+
+  setInterval(
+    showNextProfileImage,
+    500
+  );
+
+});
+
+
+/* =========================================================
+   ABOUT IMAGE SLIDESHOW
+   Only runs if .gallery-image elements exist
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const aboutImages =
+    document.querySelectorAll(".gallery-image");
+
+
+  if (aboutImages.length <= 1) {
+    return;
+  }
+
+
+  let currentIndexAbout = 0;
+
+
+  function showNextAboutImage() {
+
+    aboutImages[
+      currentIndexAbout
+    ].style.display = "none";
+
+
+    currentIndexAbout =
+      (currentIndexAbout + 1) %
+      aboutImages.length;
+
+
+    aboutImages[
+      currentIndexAbout
+    ].style.display = "block";
+
+  }
+
+
+  setInterval(
+    showNextAboutImage,
+    700
+  );
+
+});
+
+
+/* =========================================================
+   WORKS PAGE
+   PROJECT / INSTAGRAM STYLE POPUP
+
+   Runs only on works.html
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const worksSection =
+    document.getElementById("works");
+
+
+  /*
+     If we're not on works.html,
+     don't run any project modal code.
+  */
+
+  if (!worksSection) {
+    return;
+  }
+
+
+  const projects =
+    document.querySelectorAll(
+      ".work-image-container"
+    );
+
+
+  const modal =
+    document.getElementById("artModal");
+
+
+  const modalImage =
+    document.getElementById("modalImage");
+
+
+  const modalTitle =
+    document.getElementById("modalTitle");
+
+
+  const modalDetails =
+    document.getElementById("modalDetails");
+
+
+  const modalDescription =
+    document.getElementById(
+      "modalDescription"
+    );
+
+
+  const modalWebsite =
+    document.getElementById(
+      "modalWebsite"
+    );
+
+
+  const modalGithub =
+    document.getElementById(
+      "modalGithub"
+    );
+
+
+  const modalClose =
+    document.getElementById(
+      "modalClose"
+    );
+
+
+  /*
+     If the Works modal doesn't exist,
+     stop the function.
+  */
 
   if (!modal) {
     return;
   }
 
 
-  /* ========================================
-     CLICK PROJECT
-  ======================================== */
+  /* =====================================================
+     OPEN PROJECT
+  ===================================================== */
 
   projects.forEach(function (project) {
 
     project.style.cursor = "pointer";
 
 
-    project.addEventListener("click", function () {
-
-      /* Get project information */
-
-      const image = this.dataset.image;
-      const title = this.dataset.title;
-      const details = this.dataset.details;
-      const description = this.dataset.description;
-
-      const website = this.dataset.website;
-      const github = this.dataset.github;
+    project.addEventListener(
+      "click",
+      function () {
 
 
-      /* PROJECT IMAGE */
+        /* -----------------------------------------
+           PROJECT INFORMATION
+        ----------------------------------------- */
 
-      if (modalImage) {
-        modalImage.src = image || "";
-      }
+        const image =
+          this.dataset.image;
 
+        const title =
+          this.dataset.title;
 
-      /* PROJECT TITLE */
+        const details =
+          this.dataset.details;
 
-      if (modalTitle) {
-        modalTitle.textContent = title || "";
-      }
+        const description =
+          this.dataset.description;
 
+        const website =
+          this.dataset.website;
 
-      /* PROJECT DETAILS */
-
-      if (modalDetails) {
-        modalDetails.textContent = details || "";
-      }
-
-
-      /* PROJECT DESCRIPTION */
-
-      if (modalDescription) {
-        modalDescription.textContent = description || "";
-      }
+        const github =
+          this.dataset.github;
 
 
-      /* ========================================
-         WEBSITE BUTTON
-      ======================================== */
+        /* -----------------------------------------
+           IMAGE
+        ----------------------------------------- */
 
-      if (modalWebsite) {
+        if (modalImage) {
 
-        if (website) {
+          modalImage.src =
+            image || "";
 
-          modalWebsite.href = website;
-
-          modalWebsite.style.display = "inline-block";
-
-        } else {
-
-          modalWebsite.style.display = "none";
+          modalImage.alt =
+            title || "Project Preview";
 
         }
 
-      }
 
+        /* -----------------------------------------
+           TITLE
+        ----------------------------------------- */
 
-      /* ========================================
-         GITHUB BUTTON
-      ======================================== */
+        if (modalTitle) {
 
-      if (modalGithub) {
-
-        if (github) {
-
-          modalGithub.href = github;
-
-          modalGithub.style.display = "inline-block";
-
-        } else {
-
-          modalGithub.style.display = "none";
+          modalTitle.textContent =
+            title || "";
 
         }
 
+
+        /* -----------------------------------------
+           DETAILS
+        ----------------------------------------- */
+
+        if (modalDetails) {
+
+          modalDetails.textContent =
+            details || "";
+
+        }
+
+
+        /* -----------------------------------------
+           DESCRIPTION
+        ----------------------------------------- */
+
+        if (modalDescription) {
+
+          modalDescription.textContent =
+            description || "";
+
+        }
+
+
+        /* =================================================
+           WEBSITE BUTTON
+        ================================================= */
+
+        if (modalWebsite) {
+
+          if (website) {
+
+            modalWebsite.href =
+              website;
+
+            modalWebsite.style.display =
+              "inline-block";
+
+          } else {
+
+            modalWebsite.removeAttribute(
+              "href"
+            );
+
+            modalWebsite.style.display =
+              "none";
+
+          }
+
+        }
+
+
+        /* =================================================
+           GITHUB BUTTON
+        ================================================= */
+
+        if (modalGithub) {
+
+          if (github) {
+
+            modalGithub.href =
+              github;
+
+            modalGithub.style.display =
+              "inline-block";
+
+          } else {
+
+            modalGithub.removeAttribute(
+              "href"
+            );
+
+            modalGithub.style.display =
+              "none";
+
+          }
+
+        }
+
+
+        /* =================================================
+           OPEN MODAL
+        ================================================= */
+
+        modal.classList.add("active");
+
+
+        /*
+           Prevent page behind modal
+           from scrolling.
+        */
+
+        document.body.style.overflow =
+          "hidden";
+
       }
-
-
-      /* OPEN MODAL */
-
-      modal.classList.add("active");
-
-      document.body.style.overflow = "hidden";
-
-    });
+    );
 
   });
 
 
-  /* ========================================
-     CLOSE BUTTON
-  ======================================== */
-
-  if (modalClose) {
-
-    modalClose.addEventListener("click", function () {
-
-      closeProjectModal();
-
-    });
-
-  }
-
-
-  /* ========================================
-     CLICK OUTSIDE MODAL
-  ======================================== */
-
-  modal.addEventListener("click", function (event) {
-
-    if (event.target === modal) {
-
-      closeProjectModal();
-
-    }
-
-  });
-
-
-  /* ========================================
-     ESC KEY
-  ======================================== */
-
-  document.addEventListener("keydown", function (event) {
-
-    if (
-      event.key === "Escape" &&
-      modal.classList.contains("active")
-    ) {
-
-      closeProjectModal();
-
-    }
-
-  });
-
-
-  /* ========================================
-     CLOSE MODAL
-  ======================================== */
+  /* =====================================================
+     CLOSE MODAL FUNCTION
+  ===================================================== */
 
   function closeProjectModal() {
 
     modal.classList.remove("active");
 
+
     document.body.style.overflow = "";
 
+
+    /*
+       Clear previous project image.
+    */
+
+    if (modalImage) {
+
+      modalImage.src = "";
+
+    }
+
   }
+
+
+  /* =====================================================
+     X CLOSE BUTTON
+  ===================================================== */
+
+  if (modalClose) {
+
+    modalClose.addEventListener(
+      "click",
+      function () {
+
+        closeProjectModal();
+
+      }
+    );
+
+  }
+
+
+  /* =====================================================
+     CLICK DARK BACKGROUND TO CLOSE
+  ===================================================== */
+
+  modal.addEventListener(
+    "click",
+    function (event) {
+
+      if (event.target === modal) {
+
+        closeProjectModal();
+
+      }
+
+    }
+  );
+
+
+  /* =====================================================
+     ESCAPE KEY TO CLOSE
+  ===================================================== */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key === "Escape" &&
+        modal.classList.contains("active")
+      ) {
+
+        closeProjectModal();
+
+      }
+
+    }
+  );
 
 });
