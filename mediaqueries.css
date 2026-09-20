@@ -1,166 +1,423 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: auto;
-    margin-bottom: 2rem;
-    padding: 80px 30px;
-  }
+/* =====================================================
+   RESPONSIVE DESIGN
+   Desktop / Laptop / Tablet / iPhone / Android
+===================================================== */
 
-  .profile-img {
-    width: 250px;
-    height: 320px;
-  }
+/* Prevent horizontal scrolling */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   LAPTOP / TABLET
+   1200px AND BELOW
+===================================================== */
+
 @media screen and (max-width: 1200px) {
+
+  /* ---------- NAVIGATION ---------- */
+
   #desktop-nav {
     display: none;
   }
 
   #hamburger-nav {
     display: flex;
+    position: relative;
+    z-index: 1000;
+  }
+
+
+  /* ---------- PROFILE ---------- */
+
+  #profile {
+    height: auto;
+    min-height: auto;
+
+    padding: 80px 30px;
+    margin-bottom: 2rem;
   }
 
   .profile-container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+
+    width: 100%;
   }
 
   .profile-right {
     padding-top: 20px;
+    width: 100%;
   }
+
+  .profile-img {
+    width: 250px;
+    height: 320px;
+
+    max-width: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* ---------- ABOUT ---------- */
 
   .about-container {
     flex-direction: column;
+    align-items: center;
+
     text-align: center;
+
+    width: 100%;
   }
 
-  .about-text, .about-image {
+  .about-text,
+  .about-image {
     width: 100%;
   }
 
   .about-image img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
     height: auto;
   }
+
+
+  /* ---------- WORKS ---------- */
+
+  .works-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+  }
+
 }
+
+
+/* =====================================================
+   TABLETS / IPADS
+   768px AND BELOW
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* ---------- PROFILE ---------- */
+
+  #profile {
+    padding: 70px 25px;
+  }
+
+  .profile-img {
+    width: 230px;
+    height: 300px;
+  }
+
+  .profile-right h1 {
+    font-size: 2.2rem;
+  }
+
+  .profile-right h2 {
+    font-size: 1.5rem;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  #about {
+    padding: 60px 25px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .skills-group {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .skills-group h3 {
+    font-size: 1.7rem;
+  }
+
+  .skills-group li {
+    font-size: 1.1rem;
+  }
+
+
+  /* ---------- WORKS ---------- */
+
+  #works {
+    padding: 60px 15px;
+  }
+
+  /*
+     Keep Instagram-style 3-column
+     gallery on tablets
+  */
+
+  .works-container {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3px;
+
+    width: 100%;
+  }
+
+  .work-box {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .work-image-container {
+    width: 100%;
+
+    /* Instagram square */
+    aspect-ratio: 1 / 1;
+
+    height: auto;
+
+    overflow: hidden;
+  }
+
+  .work-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* ---------- PROJECT MODAL ---------- */
+
+  .art-modal {
+    padding: 20px;
+  }
+
+  .modal-content {
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+  }
+
+  .modal-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: 50vh;
+
+    max-height: 500px;
+
+    object-fit: contain;
+  }
+
+  .modal-info {
+    width: 100%;
+
+    padding: 25px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+
+  /* ---------- VISUAL ART ---------- */
+
+  .visual-art-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  #contact {
+    padding: 50px 25px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   iPHONE / ANDROID
+   600px AND BELOW
+===================================================== */
 
 @media screen and (max-width: 600px) {
 
+  /* ---------- NAVIGATION ---------- */
+
   #hamburger-nav {
-    z-index: 2;
     position: relative;
-  }
 
-  .menu-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 300%;
-    max-width: 300px; 
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    z-index: 3;
-  }
+    width: 100%;
 
-  .menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(45, 40, 62);
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    white-space: nowrap; 
-    overflow: visible; 
-  }
-
-  .menu-links.open {
-    max-height: 300px;
+    z-index: 1000;
   }
 
   .hamburger-icon {
     position: relative;
-    z-index: 4;
+
+    z-index: 1002;
   }
+
+  .menu-links {
+    position: absolute;
+
+    top: 100%;
+    right: 0;
+
+    width: min(300px, 90vw);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    z-index: 1001;
+
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .menu-links.open {
+    max-height: 500px;
+  }
+
+  .menu-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    text-align: center;
+
+    font-size: 1.1rem;
+
+    color: rgb(45, 40, 62);
+
+    text-decoration: none;
+
+    white-space: normal;
+  }
+
+
+  /* ---------- PROFILE ---------- */
 
   #profile {
+    width: 100%;
+
     height: auto;
-    margin-bottom: 2rem;
-    padding: 80px 30px;
-  }
 
-  .profile-img {
-    width: 250px;
-    height: 320px;
-  }
-}
+    padding: 60px 20px;
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: flex;
+    margin-bottom: 1rem;
   }
 
   .profile-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-right {
-    padding-top: 20px;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text, .about-image {
     width: 100%;
-  }
 
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-  }
-}
+    flex-direction: column;
 
-@media screen and (max-width: 600px) {
-  #profile {
-    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
   }
 
   .profile-img {
-    width: 200px;
-    height: 260px;
+    width: min(200px, 70vw);
+    height: auto;
+
+    aspect-ratio: 200 / 260;
+
+    object-fit: cover;
+  }
+
+  .profile-right {
+    width: 100%;
+
+    padding-top: 20px;
   }
 
   .profile-right h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+
+    word-break: normal;
   }
 
   .profile-right h2 {
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
   }
 
   .details {
     flex-direction: column;
+
     align-items: center;
+
     gap: 10px;
   }
 
-  .services {
-    grid-template-columns: 1fr;
-  }
+
+  /* ---------- ABOUT ---------- */
 
   #about {
+    width: 100%;
+
     padding: 50px 20px;
+  }
+
+  .about-container {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
   }
 
   .about-text h2 {
@@ -169,24 +426,55 @@
 
   .about-text p {
     font-size: 0.95rem;
+
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    width: 100%;
+
+    height: auto;
   }
 
   .cv-button {
-    padding: 8px 16px;
+    padding: 9px 16px;
+
     font-size: 0.9rem;
   }
 
+
+  /* ---------- SERVICES ---------- */
+
+  .services {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  #skills {
+    width: 100%;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   #skills h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .skills-group {
     flex: 0 0 100%;
+
+    width: 100%;
+
     margin-bottom: 20px;
   }
 
   .skills-group h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .skills-group ul {
@@ -194,86 +482,292 @@
   }
 
   .skills-group li {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
+
+
+  /* =================================================
+     WORKS — INSTAGRAM STYLE
+  ================================================= */
 
   #works {
-    padding: 60px 20px;
+    width: 100%;
+
+    padding: 50px 10px;
   }
 
-  @media screen and (max-width: 768px) {
+  #works .title {
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+  }
+
+  /*
+     Keep 3 columns like Instagram,
+     including on phones.
+  */
+
   .works-container {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 2px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .work-box {
+    width: 100%;
+
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .work-image-container {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    height: auto;
+
+    overflow: hidden;
+
+    border-radius: 0;
+
+    cursor: pointer;
+  }
+
+  .work-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /*
+     Don't display large hover text
+     permanently on touch screens.
+  */
+
+  .work-description-hover {
+    padding: 5px;
+
+    font-size: 0.7rem;
+  }
+
+
+  /* =================================================
+     PROJECT POPUP
+  ================================================= */
+
+  .art-modal {
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    align-items: center;
+    justify-content: center;
   }
 
   .modal-content {
+    display: flex;
+
     flex-direction: column;
+
+    width: 100%;
+    max-width: 500px;
+
     max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 8px;
+  }
+
+  .modal-image-container {
+    width: 100%;
+
+    height: auto;
   }
 
   .modal-image {
+    display: block;
+
     width: 100%;
-    height: 60vh;
+    height: auto;
+
+    max-height: 50vh;
+
+    object-fit: contain;
   }
 
   .modal-info {
     width: 100%;
+
+    padding: 20px;
   }
 
-  .work-image-container {
-    height: 500px;
-  }
-}
+  .modal-info h2 {
+    font-size: 1.4rem;
 
-  .work-photo {
-    height: 200px; /* reduce height for smaller screens */
-
+    margin-bottom: 5px;
   }
 
-  .large-photo {
-    height: 300px; /* slightly larger than standard work-photo */
-  }
-
-  .works-container {
-    grid-template-columns: 1fr;
-  }
-
-  .work-image-container {
-    height: 280px;
-  }
-
-  .wide-work .work-image-container {
-    height: 200px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .work-description {
+  .modal-details {
     font-size: 0.9rem;
   }
 
+  .modal-info p {
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+  }
+
+  .modal-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  .project-button,
   .github-button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    flex: 1;
+
+    min-width: 120px;
+
+    padding: 10px 12px;
+
+    font-size: 0.85rem;
+
+    text-align: center;
   }
+
+  .modal-close {
+    position: fixed;
+
+    top: 10px;
+    right: 15px;
+
+    font-size: 35px;
+
+    z-index: 100000;
+  }
+
+
+  /* ---------- VISUAL ART ---------- */
 
   .visual-art-container {
     grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 15px;
   }
 
 
+  /* ---------- CONTACT ---------- */
+
   #contact {
-    padding: 50px;
+    width: 100%;
+
+    padding: 50px 20px;
+  }
+
+  .contact-info {
+    width: 100%;
   }
 
   .contact-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+
+    word-break: break-word;
   }
 
   .contact-icon {
     max-width: 20px;
   }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   iPhone SE / small Android
+   400px AND BELOW
+===================================================== */
+
+@media screen and (max-width: 400px) {
+
+  #profile {
+    padding: 50px 15px;
+  }
+
+  #about,
+  #skills,
+  #contact {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  /* Instagram gallery */
+
+  #works {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .works-container {
+    gap: 2px;
+  }
+
+
+  /* Modal */
+
+  .art-modal {
+    padding: 5px;
+  }
+
+  .modal-content {
+    max-height: 92vh;
+  }
+
+  .modal-info {
+    padding: 15px;
+  }
+
+  .modal-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-info p {
+    font-size: 0.85rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+  }
+
+  .project-button,
+  .github-button {
+    width: 100%;
+  }
+
 }
