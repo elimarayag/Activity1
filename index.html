@@ -1,436 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css?v=2" />
-    <link rel="stylesheet" href="mediaqueries.css?v=2" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">
-        <h3>@works by eli</h3>
-      </div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
-          <li><a href="#works" onclick="toggleMenu()">Works</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">
-        <h3>@works by eli</h3>
-      </div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
-          <li><a href="#works" onclick="toggleMenu()">Works</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <div id="loader-container">
-      <div class="loader">
-        <div class="loader-letter">E</div>
-        <div class="loader-letter">L</div>
-        <div class="loader-letter">I</div>
-        <div class="loader-letter">S</div>
-        <div class="loader-letter">H</div>
-        <div class="loader-letter">A</div>
-      </div>
-    </div> 
-    <section id="profile">
-      <div class="profile-container">
-        <div class="profile-left">
-          <img src="/assets/profile.jpg" alt="Elisha Marayag" class="profile-img" />
-          <div class="social-icons">
-            <a href="https://www.facebook.com/eliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii" target="_blank" class="icon-link">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/artbyelimenopii/" target="_blank" class="icon-link">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/elisha-marayag-47861b214/" target="_blank" class="icon-link">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          
-        </div>
-    
-        <div class="profile-right">
-          <p class="greeting">Hello Everyone 👋</p>
-          <h1>I'm Elisha Marayag</h1>
-          <h2>I am a <span class="role">Creative Developer</span></h2>
-    
-          <div class="details">
-            <p><span>📅</span> 01.16.2003</p>
-            <p><span>📞</span> 09569849369</p>
-            <p><span>✉️</span> marayagelisha@gmail.com</p>
-            <p><span>📍</span> Marikina City, Philippines</p>
-          </div>
-    
-          <p class="bio">
-            I'm a creative developer and visual artist specializing in websites, mobile applications, and UI design. I build clean, user-friendly digital experiences that blend functionality with visual impact. With a background in visual art, I bring a unique eye for detail and creativity to every project—whether I’m coding, designing interfaces, or crafting visual concepts. I love turning ideas into interactive, meaningful work.
-          </p>
-    
-          <h3>What I do</h3>
-            <div class="services">
-            <div>🌐 Web Sites and Platforms</div>
-            <div>📱 Mobile Applications</div>
-            <div>🎨 Arts and Creatives</div>
-            <div>🖌️ UI/UX</div>
-            <div>🖼️ Adobe Photoshop</div>
-          </div>
-        </div>
-      </div>
-    </section>
-       
-    <section id="about">
-      <div class="about-container">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            Hi! I'm a multidisciplinary creative who brings ideas to life through technology and visual storytelling. I specialize in websites and mobile applications, with a passion for building clean, functional, and user-friendly digital experiences. From front-end interfaces to interactive prototypes, I craft products that are not only beautiful but also meaningful and intuitive.
-          </p>
-          <p>
-            I have experience developing responsive websites and cross-platform mobile applications using modern frameworks and tools. Whether it's a sleek landing page, a fully functional e-commerce site, or a mobile app with seamless navigation, I ensure every project is built with performance, accessibility, and user experience in mind.
-          </p>
-          <p>
-            Beyond development, I have a strong eye for design. I can design user interfaces from scratch—focusing on usability, hierarchy, and visual harmony. I enjoy working with color, layout, and typography to create UI that’s not just usable, but delightful. My design process always starts with empathy: understanding the user, the problem, and how to solve it with thoughtful, elegant solutions.
-          </p>
-          <p>
-            What sets me apart is my background as a visual artist. Creativity is the thread that runs through everything I do. I’ve spent years exploring various forms of art—illustration, painting, digital media—which gives me a unique perspective when approaching design and development. My artistic background allows me to bring a strong sense of aesthetic and originality to every project I take on.
-          </p>
-        </div>
-    
-        <div class="about-image">
-          <img src="/assets/about-photo.jpg" alt="About Me Photo" />
-          <a href="/assets/Resume-Marayag.pdf" target="_blank" class="cv-button">Download CV</a>
-        </div>
-      </div>
-    </section>    
-    <section id="skills">
-      <h1>Skills</h1>
-      <div class="skills-grid">
-        <div>💻 C</div>
-        <div>💻 C++</div>
-        <div>💻 Python</div>
-        <div>🌐 HTML</div>
-        <div>🎨 CSS</div>
-        <div>📜 JavaScript</div>
-        <div>🖼️ Adobe Photoshop</div>
-        <div>✏️ Adobe Illustrator</div>
-        <div>🎞️ Adobe Animate</div>
-      </div>
-    </section>
-    <section id="visual-art">
-      <h2 class="visual-title">My works as a visual artist</h2>
-      <div class="visual-art-container">
-        <div class="art-box">
-          <img src="./assets/art1.jpg" alt="Artwork 1" class="art-image" />
-          <div class="art-description">
-            <p>Awake: trying to stay awake and remember every real thing that happened.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art2.jpg" alt="Artwork 2" class="art-image" />
-          <div class="art-description">
-            <p>I tried drowning my emotions through drinking and smoking, but nothing worked. Nothing made me feel better; it all made me feel worse. I guess that's the thing about being sick—nothing you do will ever make it go away. It feels like you're stuck in a cycle, desperately searching for an escape that doesn't exist. And the more you try, the deeper you sink into the darkness.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art3.jpg" alt="Artwork 3" class="art-image" />
-          <div class="art-description">
-            <p>Echohead: a head full of echoes, repeating thoughts, or voices that refuse to fade away</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art4.jpg" alt="Artwork 4" class="art-image" />
-          <div class="art-description">
-            <p>Underneath: what lives inside. The real part, waiting, watching, rising.
-            </p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art5.jpg" alt="Artwork 5" class="art-image" />
-          <div class="art-description">
-            <p>Spillpoint: not a meltdown from rage but one from exhaustion. The kind you don't come back from easily.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art6.jpg" alt="Artwork 6" class="art-image" />
-          <div class="art-description">
-            <p>Snapped: he used to fake it. now it’s real and deadly.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art7.jpg" alt="Artwork 7" class="art-image" />
-          <div class="art-description">
-            <p>A figure dissolves into the background, his form fading with each tear that falls. The tears don’t just express sorrow—they transform him, blending his being into the very fabric behind him. Slowly, he becomes part of the silence he once stood against.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art8.jpg" alt="Artwork 8" class="art-image" />
-          <div class="art-description">
-            <p>A series of eyes stare out from the canvas, each one a window into a different storm—rage, sorrow, joy, fear, and hope flicker in shifting reflections. No words are spoken, yet the eyes scream, whisper, ache, and shine, capturing the raw chaos of being human.</p>
-          </div>
-        </div>
-        <div class="art-box">
-          <img src="./assets/art9.jpg" alt="Artwork 9" class="art-image" />
-          <div class="art-description">
-            <p>A lone skull rests in the center, not lifeless but hauntingly expressive. Cracks and shadows form subtle shapes—echoes of laughter, pain, and longing—as if the remnants of emotion still cling to the bone. It is death, yes, but not silent—it's memory carved in calcium.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="works">
-      <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <p class="section__text__p1">My other</p>
-  <h1 class="title">Works</h1>
-  <div class="works-container">
+  <title>Elisha Marayag | Portfolio</title>
 
-    <!-- Photoshop -->
-    <div class="work-box">
-      <div class="work-image-container"
-           data-image="./assets/photoshop.jpg"
-           data-title="Movie Poster"
-           data-details="Adobe Photoshop"
-           data-description="A movie poster designed using Adobe Photoshop.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- DESKTOP NAVIGATION -->
+  <nav id="desktop-nav">
+
+    <div class="logo">
+      <h3>@works by eli</h3>
+    </div>
+
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="arts.html">Arts</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+  <!-- MOBILE NAVIGATION -->
+  <nav id="hamburger-nav">
+
+    <div class="logo">
+      <h3>@works by eli</h3>
+    </div>
+
+    <div class="hamburger-menu">
+
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="arts.html">Arts</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- LOADER -->
+  <div id="loader-container">
+
+    <div class="loader">
+      <div class="loader-letter">E</div>
+      <div class="loader-letter">L</div>
+      <div class="loader-letter">I</div>
+      <div class="loader-letter">S</div>
+      <div class="loader-letter">H</div>
+      <div class="loader-letter">A</div>
+    </div>
+
+  </div>
+
+
+  <!-- HOME / PROFILE -->
+  <section id="profile">
+
+    <div class="profile-container">
+
+      <div class="profile-left">
 
         <img
-          src="./assets/photoshop.jpg"
-          alt="Photoshop Movie Poster"
-          class="work-photo"
+          src="./assets/profile.jpg"
+          alt="Elisha Marayag"
+          class="profile-img"
         />
 
-        <div class="work-description-hover">
-          <p>View Project</p>
+        <div class="social-icons">
+
+          <a
+            href="https://www.facebook.com/eliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+            target="_blank"
+            class="icon-link"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/artbyelimenopii/"
+            target="_blank"
+            class="icon-link"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/elisha-marayag-47861b214/"
+            target="_blank"
+            class="icon-link"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
         </div>
 
       </div>
-    </div>
-    <!-- Cryptography -->
-    <div class="work-box">
-      <div class="work-image-container"
-           data-image="./assets/crypt.png"
-           data-title="Cryptography GUI"
-           data-details="Python"
-           data-description="A cryptography graphical user interface created using Python."
-           data-link="https://github.com/elimarayag/GUI.git"
-           data-button="View on GitHub">
 
-        <img
-          src="./assets/crypt.png"
-          alt="Cryptography GUI"
-          class="work-photo"
-        />
 
-        <div class="work-description-hover">
-          <p>View Project</p>
+      <div class="profile-right">
+
+        <p class="greeting">
+          Hello Everyone 👋
+        </p>
+
+        <h1>
+          I'm Elisha Marayag
+        </h1>
+
+        <h2>
+          I am a
+          <span class="role">
+            Creative Developer
+          </span>
+        </h2>
+
+
+        <div class="details">
+
+          <p>
+            <span>📅</span>
+            01.16.2003
+          </p>
+
+          <p>
+            <span>📞</span>
+            09569849369
+          </p>
+
+          <p>
+            <span>✉️</span>
+            marayagelisha@gmail.com
+          </p>
+
+          <p>
+            <span>📍</span>
+            Marikina City, Philippines
+          </p>
+
+        </div>
+
+
+        <p class="bio">
+          I'm a creative developer and visual artist specializing in
+          websites, mobile applications, and UI design. I build clean,
+          user-friendly digital experiences that blend functionality
+          with visual impact. With a background in visual art, I bring
+          a unique eye for detail and creativity to every project—whether
+          I’m coding, designing interfaces, or crafting visual concepts.
+          I love turning ideas into interactive, meaningful work.
+        </p>
+
+
+        <h3>What I do</h3>
+
+        <div class="services">
+
+          <div>🌐 Web Sites and Platforms</div>
+          <div>📱 Mobile Applications</div>
+          <div>🎨 Arts and Creatives</div>
+          <div>🖌️ UI/UX</div>
+          <div>🖼️ Adobe Photoshop</div>
+
         </div>
 
       </div>
-    </div>
-    <!-- Personal Interest Website -->
-<div class="work-box">
-  <div
-    class="work-image-container"
-    data-image="./assets/workRR1.png"
-    data-title="Personal Interest Website"
-    data-details="Web Development"
-    data-description="A personal interest website created as a web development project."
-    data-website="https://rhythmrealm.netlify.app/"
-    data-github="https://github.com/elimarayag/ACTIVITY_2_BSIS3A.git"
-  >
-    <img
-      src="./assets/workRR1.png"
-      alt="Personal Interest Website"
-      class="work-photo"
-    />
-    <div class="work-description-hover">
-      <p>View Project</p>
+
     </div>
 
-  </div>
+  </section>
+  
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-</div>
+<footer class="portfolio-footer">
 
-   <!-- Capstone -->
-<div class="work-box">
+  <div class="footer-wrapper">
 
-  <div
-    class="work-image-container"
-    data-image="./assets/capstone.png"
-    data-title="EnergyA Fitness & Athletics"
-    data-details="Capstone Project"
-    data-description="A web-based fitness and athletics center management system developed as a capstone project."
-    data-website="https://energyafitness.com/"
-  >
+    <!-- TOP AREA -->
+    <div class="footer-top">
 
-    <img
-      src="./assets/capstone.png"
-      alt="EnergyA Fitness & Athletics"
-      class="work-photo"
-    />
+      <!-- BRAND -->
+      <div class="footer-brand">
 
-    <div class="work-description-hover">
-      <p>View Project</p>
-    </div>
+        <p class="footer-small-label">
+          PORTFOLIO
+        </p>
 
-  </div>
+        <h2>@works by eli</h2>
 
-</div>
-    <!-- To Do List -->
-<div class="work-box">
-  <div class="work-image-container"
-       data-image="./assets/todolist.png"
-       data-title="To-Do List App"
-       data-details="React.js"
-       data-description="A simple and interactive to-do list application created using React.js."
-       data-website="https://list-react-app.netlify.app/"
-       data-github="https://github.com/elimarayag/todolistapp.git">
-
-    <img
-      src="./assets/todolist.png"
-      alt="React To-Do List"
-      class="work-photo"
-    />
-
-    <div class="work-description-hover">
-      <p>View Project</p>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- HYE Enterprise -->
-<div class="work-box">
-  <div class="work-image-container"
-       data-image="./assets/hye.png"
-       data-title="HYE Enterprise Corp Website"
-       data-details="Web Development"
-       data-description="A company website developed for HYE Enterprise Corp."
-       data-website="https://hyeweb.netlify.app/"
-       data-github="https://github.com/elimarayag/HYEWEBSITE.git">
-
-    <img
-      src="./assets/hye.png"
-      alt="HYE Enterprise Corp Website"
-      class="work-photo"
-    />
-
-    <div class="work-description-hover">
-      <p>View Project</p>
-    </div>
-
-  </div>
-</div>
-  </div>
-
-
-  <!-- PROJECT POPUP -->
-<div class="art-modal" id="artModal">
-  <span class="modal-close" id="modalClose">&times;</span>
-  <div class="modal-content">
-    <div class="modal-image-container">
-      <img
-        src=""
-        id="modalImage"
-        class="modal-image"
-        alt="Project Preview"
-      />
-    </div>
-
-    <div class="modal-info">
-
-      <h2 id="modalTitle"></h2>
-
-      <p id="modalDetails" class="modal-details"></p>
-
-      <p id="modalDescription"></p>
-
-
-      <!-- BOTH BUTTONS -->
-      <div class="modal-buttons">
+        <p class="footer-description">
+          Creative Developer & Visual Artist creating digital
+          experiences where technology meets visual storytelling.
+        </p>
 
         <a
-          href="#"
-          id="modalWebsite"
-          class="project-button"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:marayagelisha@gmail.com"
+          class="footer-email"
         >
-          See Website
-        </a>
-
-        <a
-          href="#"
-          id="modalGithub"
-          class="project-button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
+          marayagelisha@gmail.com ↗
         </a>
 
       </div>
 
+
+      <!-- NAVIGATION -->
+      <div class="footer-navigation">
+
+        <p class="footer-label">
+          NAVIGATION
+        </p>
+
+        <div class="footer-links">
+
+          <a href="index.html">
+            <span>01</span>
+            Home
+          </a>
+
+          <a href="about.html">
+            <span>02</span>
+            About
+          </a>
+
+          <a href="skills.html">
+            <span>03</span>
+            Skills
+          </a>
+
+          <a href="arts.html">
+            <span>04</span>
+            Arts
+          </a>
+
+          <a href="works.html">
+            <span>05</span>
+            Works
+          </a>
+
+          <a href="contact.html">
+            <span>06</span>
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- SOCIAL -->
+      <div class="footer-social">
+
+        <p class="footer-label">
+          FIND ME
+        </p>
+
+        <div class="footer-social-links">
+
+          <a
+            href="https://www.linkedin.com/in/elisha-marayag-47861b214/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <span class="footer-arrow">↗</span>
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/artbyelimenopii/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Instagram</span>
+            <span class="footer-arrow">↗</span>
+          </a>
+
+
+          <a
+            href="https://www.facebook.com/eliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Facebook</span>
+            <span class="footer-arrow">↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- NAME / SIGNATURE -->
+    <div class="footer-signature">
+
+      <p class="footer-signature-label">
+        CREATIVE DEVELOPER · VISUAL ARTIST
+      </p>
+
+      <div class="footer-name">
+        <span>ELISHA</span>
+        <span class="footer-name-muted">MARAYAG</span>
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Elisha Marayag. All Rights Reserved.
+      </p>
+
+
+      <p class="footer-location">
+        Marikina City, Philippines
+      </p>
+
+
+      <a href="#profile" class="back-to-top">
+        Back to top
+        <span>↑</span>
+      </a>
+
     </div>
 
   </div>
 
-</div>
+</footer>
 
-  </div>
+  <script src="script.js"></script>
 
-</section>
-    <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-container">
-        <div class="contact-info">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p>Email: <a href="mailto:marayagelisha@gmail.com">marayagelisha@gmail.com</a></p>
-        </div>
-        <div class="contact-info">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/elisha-marayag-47861b214/" target="_blank">linkedin.com/in/elisha-marayag</a></p>
-        </div>
-      </div>
-    </section>     
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#visual-art" onclick="toggleMenu()">Arts</a></li> 
-            <li><a href="#works" onclick="toggleMenu()">Works</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 Eli Marayag. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
