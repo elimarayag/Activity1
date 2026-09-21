@@ -2267,6 +2267,21 @@ a:hover {
     padding: 25px 18px;
   }
 
+/* =====================================================
+   COFFEE POSTER
+   Keep vertical poster fully visible
+===================================================== */
+
+.coffee-project .work-image-area {
+  background-color: #160b06;
+}
+
+.coffee-project .work-photo {
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+}
+
 }
 /* =====================================================
    VISUAL ART — DARK EXHIBITION GALLERY
