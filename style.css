@@ -68,39 +68,57 @@ a:hover {
    HAMBURGER MENU
 ========================================= */
 
+/* =====================================================
+   MOBILE / HAMBURGER NAVIGATION
+===================================================== */
+
 #hamburger-nav {
   display: none;
+
+  position: relative;
+  z-index: 9999;
+
+  background-color: #0d0d0d;
 }
 
 
-/* Hamburger container */
+/* =====================================================
+   HAMBURGER CONTAINER
+===================================================== */
 
 .hamburger-menu {
   position: relative;
-  display: inline-block;
+
+  display: inline-flex;
+  align-items: center;
+
+  z-index: 9999;
 }
 
 
-/* Hamburger icon */
+/* =====================================================
+   HAMBURGER ICON
+===================================================== */
 
 .hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   width: 30px;
   height: 24px;
 
   margin-right: 10px;
 
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   position: relative;
-  z-index: 1001;
+
+  cursor: pointer;
+
+  z-index: 10001;
 }
 
 
-/* White hamburger lines */
+/* WHITE HAMBURGER LINES */
 
 .hamburger-icon span {
   display: block;
@@ -108,116 +126,165 @@ a:hover {
   width: 100%;
   height: 2px;
 
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 
-  border-radius: 2px;
+  border-radius: 10px;
 
-  transition: all 0.3s ease-in-out;
+  opacity: 1;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background-color 0.3s ease;
 }
 
 
-/* =========================================
+/* =====================================================
    DROPDOWN MENU
-========================================= */
+===================================================== */
 
 .menu-links {
   position: absolute;
 
-  top: calc(100% + 15px);
-  right: 0;
+  top: calc(100% + 20px);
+  right: 10px;
 
-  width: 220px;
+  width: 230px;
 
-  max-height: 0;
+  padding: 8px;
 
-  overflow: hidden;
-
-  /* Almost black background */
   background-color: #0d0d0d;
 
-  border-radius: 10px;
+  border: 1px solid #333333;
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  /* CLOSED STATE */
+  max-height: 0;
 
   opacity: 0;
   visibility: hidden;
 
-  transition:
-    max-height 0.3s ease-in-out,
-    opacity 0.3s ease-in-out,
-    visibility 0.3s ease-in-out;
+  overflow: hidden;
 
-  z-index: 1000;
+  transform: translateY(-10px);
+
+  pointer-events: none;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 10000;
 }
 
 
-/* Menu list */
+/* =====================================================
+   MENU LIST
+===================================================== */
 
 .menu-links ul {
-  margin: 0;
-  padding: 10px 0;
-}
-
-
-/* Remove bullets */
-
-.menu-links li {
-  list-style: none;
+  width: 100%;
 
   margin: 0;
   padding: 0;
 }
 
 
-/* Menu links */
+/* REMOVE BULLETS */
 
-.menu-links a {
-  display: block;
-
+.menu-links li {
   width: 100%;
 
-  padding: 14px 20px;
+  margin: 0;
+  padding: 0;
 
-  color: #ffffff;
+  list-style: none;
+}
 
-  text-align: center;
 
-  font-size: 1.1rem;
+/* =====================================================
+   MENU LINKS
+===================================================== */
+
+.menu-links a {
+  width: 100%;
+
+  display: block;
+
+  padding: 14px 18px;
+
+  color: #ffffff !important;
+
+  background-color: transparent;
+
+  font-size: 1rem;
   font-weight: 500;
+
+  line-height: 1.2;
+
+  text-align: left;
 
   text-decoration: none;
 
+  border-radius: 7px;
+
+  opacity: 1 !important;
+
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    padding-left 0.25s ease;
 }
 
 
-/* Hover effect */
+/* HOVER */
 
 .menu-links a:hover {
-  background-color: #1c1c1c;
+  padding-left: 24px;
 
-  color: #ffffff;
+  background-color: #1f1f1f;
+
+  color: #ffffff !important;
 }
 
 
-/* =========================================
+/* SMALL LINE BETWEEN LINKS */
+
+.menu-links li:not(:last-child) {
+  border-bottom: 1px solid #1f1f1f;
+}
+
+
+/* =====================================================
    OPEN MENU
-========================================= */
+===================================================== */
 
 .menu-links.open {
-  max-height: 500px;
+  max-height: 600px;
 
   opacity: 1;
   visibility: visible;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
 }
 
 
-/* =========================================
-   HAMBURGER → X ANIMATION
-========================================= */
+/* =====================================================
+   HAMBURGER → X
+===================================================== */
 
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(8px, 7px);
+
+  background-color: #ffffff !important;
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -226,66 +293,100 @@ a:hover {
 
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(8px, -7px);
-}
-#loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+
+  background-color: #ffffff !important;
 }
 
-.loader {
-  display: flex;
-  align-items: center;
+
+/* =====================================================
+   MOBILE NAV LOGO
+===================================================== */
+
+#hamburger-nav .logo,
+#hamburger-nav .logo h3 {
+  color: #ffffff !important;
 }
 
-.loader-letter {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 5px;
-  opacity: 0;
-  visibility: hidden;
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    visibility: hidden;
+/* =====================================================
+   MOBILE DISPLAY
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+  /* Hide desktop navigation */
+
+  #desktop-nav {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    visibility: visible;
+
+
+  /* Show hamburger navigation */
+
+  #hamburger-nav {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    background-color: #0d0d0d;
+
+    position: relative;
+
+    z-index: 9999;
   }
+
+
+  #hamburger-nav .logo h3 {
+    margin: 0;
+
+    color: #ffffff !important;
+  }
+
 }
 
-.loader-letter:nth-child(1) {
-  animation: fadeIn 0.5s ease forwards 0.5s;
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+  #hamburger-nav {
+    padding: 18px 20px;
+  }
+
+  .hamburger-icon {
+    margin-right: 0;
+  }
+
+  .menu-links {
+    right: 0;
+
+    width: 220px;
+  }
+
 }
 
-.loader-letter:nth-child(2) {
-  animation: fadeIn 0.5s ease forwards 1s;
-}
 
-.loader-letter:nth-child(3) {
-  animation: fadeIn 0.5s ease forwards 1.5s;
-}
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
 
-.loader-letter:nth-child(4) {
-  animation: fadeIn 0.5s ease forwards 2s;
-}
+@media screen and (max-width: 380px) {
 
-.loader-letter:nth-child(5) {
-  animation: fadeIn 0.5s ease forwards 2.5s;
-}
+  #hamburger-nav {
+    padding: 16px;
+  }
 
-.loader-letter:nth-child(6) {
-  animation: fadeIn 0.5s ease forwards 3s;
+  .menu-links {
+    width: 205px;
+  }
+
 }
 
 /*PROFILE SECTION*/
