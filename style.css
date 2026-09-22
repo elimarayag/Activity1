@@ -1255,15 +1255,18 @@ a:hover {
 
 #works {
   width: 100%;
+  min-height: 100vh;
 
   padding: 100px 30px 120px;
 
   background-color: #0a0a0a;
+
   color: #ffffff;
 
   font-family: "Segoe UI", sans-serif;
 
   box-sizing: border-box;
+
   overflow: hidden;
 }
 
@@ -1273,6 +1276,7 @@ a:hover {
   box-sizing: border-box;
 }
 
+
 .works-wrapper {
   width: 100%;
   max-width: 1200px;
@@ -1281,18 +1285,20 @@ a:hover {
 }
 
 
+
 /* =====================================================
-   HEADER
+   MAIN HEADER
 ===================================================== */
 
 .works-header {
   width: 100%;
   max-width: 750px;
 
-  margin: 0 auto 70px;
+  margin: 0 auto 100px;
 
   text-align: center;
 }
+
 
 .works-eyebrow {
   margin: 0 0 15px;
@@ -1307,6 +1313,7 @@ a:hover {
   text-transform: uppercase;
 }
 
+
 .works-header h1 {
   margin: 0 0 20px;
 
@@ -1320,11 +1327,14 @@ a:hover {
   letter-spacing: -3px;
 }
 
+
 .works-header h1 span {
   color: #666666;
 }
 
+
 .works-intro {
+  width: 100%;
   max-width: 600px;
 
   margin: 0 auto;
@@ -1335,6 +1345,117 @@ a:hover {
 
   line-height: 1.7;
 }
+
+
+
+/* =====================================================
+   PROJECT GROUP
+===================================================== */
+
+.works-group {
+  width: 100%;
+}
+
+
+
+/* =====================================================
+   GROUP HEADER
+===================================================== */
+
+.works-group-header {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 110px 1fr auto;
+
+  align-items: end;
+
+  gap: 30px;
+
+  margin-bottom: 35px;
+
+  padding: 0 0 30px;
+
+  border-bottom: 1px solid #333333;
+}
+
+
+
+/* LARGE COLLECTION NUMBER */
+
+.works-group-number {
+  color: #292929;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+
+  line-height: 0.75;
+
+  letter-spacing: -5px;
+}
+
+
+
+/* GROUP TITLE */
+
+.works-group-title p {
+  margin: 0 0 8px;
+
+  color: #666666;
+
+  font-family: monospace;
+
+  font-size: 0.6rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+.works-group-title h2 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+
+.works-group-title h2 span {
+  color: #5d5d5d;
+
+  font-style: italic;
+}
+
+
+
+/* PROJECT COUNT */
+
+.works-group-count {
+  padding-bottom: 5px;
+
+  color: #555555;
+
+  font-family: monospace;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
 
 
 /* =====================================================
@@ -1351,6 +1472,7 @@ a:hover {
 }
 
 
+
 /* =====================================================
    PROJECT ROW
 ===================================================== */
@@ -1359,14 +1481,14 @@ a:hover {
   width: 100%;
   min-height: 260px;
 
+  position: relative;
+
   display: grid;
 
   grid-template-columns:
     minmax(320px, 0.95fr)
     minmax(400px, 1.15fr)
     145px;
-
-  position: relative;
 
   background-color: #0d0d0d;
 
@@ -1379,8 +1501,10 @@ a:hover {
   transition:
     background-color 0.35s ease,
     border-color 0.35s ease,
-    transform 0.35s ease;
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
 
 .work-box:hover {
   background-color: #111111;
@@ -1388,7 +1512,11 @@ a:hover {
   border-color: #4a4a4a;
 
   transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
 }
+
 
 
 /* =====================================================
@@ -1406,6 +1534,7 @@ a:hover {
   background-color: #111111;
 }
 
+
 .work-photo {
   width: 100%;
   height: 100%;
@@ -1416,21 +1545,27 @@ a:hover {
 
   object-fit: cover;
 
-  filter: saturate(0.8) brightness(0.8);
+  filter:
+    saturate(0.8)
+    brightness(0.8);
 
   transition:
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     filter 0.4s ease;
 }
 
+
 .work-box:hover .work-photo {
   transform: scale(1.05);
 
-  filter: saturate(1) brightness(0.95);
+  filter:
+    saturate(1)
+    brightness(0.95);
 }
 
 
-/* subtle image gradient */
+
+/* IMAGE GRADIENT */
 
 .work-image-area::after {
   content: "";
@@ -1438,6 +1573,8 @@ a:hover {
   position: absolute;
 
   inset: 0;
+
+  z-index: 1;
 
   background:
     linear-gradient(
@@ -1451,7 +1588,10 @@ a:hover {
 }
 
 
-/* IMAGE CATEGORY */
+
+/* =====================================================
+   IMAGE CATEGORY
+===================================================== */
 
 .work-image-label {
   position: absolute;
@@ -1459,11 +1599,11 @@ a:hover {
   top: 20px;
   left: 20px;
 
-  z-index: 2;
+  z-index: 3;
 
-  max-width: 110px;
+  max-width: 130px;
 
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
 
   font-size: 0.58rem;
   font-weight: 700;
@@ -1476,7 +1616,10 @@ a:hover {
 }
 
 
-/* IMAGE ICON */
+
+/* =====================================================
+   IMAGE ICON
+===================================================== */
 
 .work-image-icon {
   position: absolute;
@@ -1484,7 +1627,7 @@ a:hover {
   left: 20px;
   bottom: 20px;
 
-  z-index: 2;
+  z-index: 3;
 
   width: 35px;
   height: 35px;
@@ -1506,6 +1649,7 @@ a:hover {
     transform 0.3s ease;
 }
 
+
 .work-box:hover .work-image-icon {
   background-color: #ffffff;
 
@@ -1513,6 +1657,7 @@ a:hover {
 
   transform: rotate(45deg);
 }
+
 
 
 /* =====================================================
@@ -1534,7 +1679,10 @@ a:hover {
 }
 
 
-/* HUGE PROJECT NUMBER */
+
+/* =====================================================
+   PROJECT NUMBER
+===================================================== */
 
 .work-number {
   align-self: start;
@@ -1550,18 +1698,21 @@ a:hover {
   transition: color 0.35s ease;
 }
 
+
 .work-box:hover .work-number {
   color: #454545;
 }
 
 
+
 /* =====================================================
-   INFORMATION
+   PROJECT INFORMATION
 ===================================================== */
 
 .work-information {
   min-width: 0;
 }
+
 
 .work-category {
   margin: 0 0 7px;
@@ -1575,6 +1726,7 @@ a:hover {
 
   text-transform: uppercase;
 }
+
 
 .work-information h2 {
   margin: 0 0 10px;
@@ -1591,9 +1743,11 @@ a:hover {
   transition: color 0.3s ease;
 }
 
+
 .work-box:hover .work-information h2 {
   color: #ffffff;
 }
+
 
 .work-description {
   width: 100%;
@@ -1609,8 +1763,9 @@ a:hover {
 }
 
 
+
 /* =====================================================
-   TECHNOLOGY TAGS
+   TAGS
 ===================================================== */
 
 .work-tags {
@@ -1619,6 +1774,7 @@ a:hover {
 
   gap: 7px;
 }
+
 
 .work-tags span {
   display: inline-block;
@@ -1640,11 +1796,13 @@ a:hover {
     background-color 0.3s ease;
 }
 
+
 .work-box:hover .work-tags span {
   border-color: #666666;
 
   color: #dddddd;
 }
+
 
 
 /* =====================================================
@@ -1655,6 +1813,7 @@ a:hover {
   min-width: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
@@ -1671,6 +1830,7 @@ a:hover {
     border-color 0.3s ease;
 }
 
+
 .work-action > span {
   font-size: 0.65rem;
   font-weight: 600;
@@ -1679,6 +1839,7 @@ a:hover {
 
   letter-spacing: 1px;
 }
+
 
 .work-arrow {
   flex-shrink: 0;
@@ -1704,20 +1865,162 @@ a:hover {
     transform 0.3s ease;
 }
 
+
 .work-box:hover .work-action {
   color: #ffffff;
 
   border-color: #444444;
 }
 
+
 .work-box:hover .work-arrow {
   background-color: #ffffff;
+
   border-color: #ffffff;
 
   color: #000000;
 
   transform: translateX(4px);
 }
+
+
+
+/* =====================================================
+   COLLECTION DIVIDER
+===================================================== */
+
+.works-collection-divider {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 120px 0;
+
+  color: #454545;
+}
+
+
+.works-collection-divider span {
+  font-family: monospace;
+
+  font-size: 0.55rem;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+.works-collection-divider div {
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #252525,
+      #555555,
+      #252525
+    );
+}
+
+
+
+/* =====================================================
+   DESIGN COLLECTION
+===================================================== */
+
+.works-group-design .works-group-number {
+  color: #333333;
+}
+
+
+
+/* =====================================================
+   VERTICAL POSTERS
+===================================================== */
+
+.poster-project .work-image-area {
+  background-color: #121212;
+}
+
+
+.poster-project .work-photo {
+  object-fit: contain;
+  object-position: center;
+
+  padding: 8px;
+}
+
+
+
+/* COFFEE */
+
+.coffee-project .work-image-area {
+  background-color: #160b06;
+}
+
+
+
+/* CLOWN */
+
+.clown-project .work-image-area {
+  background-color: #0d1f38;
+}
+
+
+
+/* =====================================================
+   END OF WORK
+===================================================== */
+
+.works-end {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 100px;
+
+  padding: 22px 0;
+
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
+
+
+.works-end span {
+  color: #555555;
+
+  font-family: monospace;
+
+  font-size: 0.58rem;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+.works-end div {
+  width: 100%;
+  height: 1px;
+
+  background-color: #252525;
+}
+
 
 
 /* =====================================================
@@ -1732,6 +2035,7 @@ a:hover {
   z-index: 99999;
 
   display: none;
+
   align-items: center;
   justify-content: center;
 
@@ -1743,9 +2047,11 @@ a:hover {
   -webkit-backdrop-filter: blur(8px);
 }
 
+
 .art-modal.active {
   display: flex;
 }
+
 
 
 /* =====================================================
@@ -1773,6 +2079,7 @@ a:hover {
 }
 
 
+
 /* =====================================================
    MODAL IMAGE
 ===================================================== */
@@ -1782,6 +2089,7 @@ a:hover {
   min-width: 0;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1790,15 +2098,18 @@ a:hover {
   overflow: hidden;
 }
 
+
 .modal-image {
   width: 100%;
   height: 100%;
+
   max-height: 88vh;
 
   display: block;
 
   object-fit: contain;
 }
+
 
 
 /* =====================================================
@@ -1818,6 +2129,7 @@ a:hover {
   overflow-y: auto;
 }
 
+
 .modal-project-label {
   margin: 0 0 12px !important;
 
@@ -1830,6 +2142,7 @@ a:hover {
 
   text-transform: uppercase;
 }
+
 
 .modal-info h2 {
   margin: 0 0 10px;
@@ -1844,6 +2157,7 @@ a:hover {
   line-height: 1.1;
 }
 
+
 .modal-details {
   margin: 0 0 25px;
 
@@ -1857,6 +2171,7 @@ a:hover {
   text-transform: uppercase;
 }
 
+
 .modal-info > p:not(.modal-details):not(.modal-project-label) {
   margin: 0;
 
@@ -1866,6 +2181,7 @@ a:hover {
 
   line-height: 1.7;
 }
+
 
 
 /* =====================================================
@@ -1881,12 +2197,14 @@ a:hover {
   margin-top: 30px;
 }
 
+
 .project-button {
+  min-height: 42px;
+
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
-
-  min-height: 42px;
 
   padding: 10px 17px;
 
@@ -1910,8 +2228,10 @@ a:hover {
     transform 0.3s ease;
 }
 
+
 .project-button:hover {
   background-color: #ffffff;
+
   border-color: #ffffff;
 
   color: #000000;
@@ -1920,8 +2240,9 @@ a:hover {
 }
 
 
+
 /* =====================================================
-   CLOSE BUTTON
+   MODAL CLOSE
 ===================================================== */
 
 .modal-close {
@@ -1936,6 +2257,7 @@ a:hover {
   height: 45px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1949,6 +2271,7 @@ a:hover {
   color: #ffffff;
 
   font-family: Arial, sans-serif;
+
   font-size: 1.8rem;
   font-weight: 300;
 
@@ -1962,6 +2285,7 @@ a:hover {
     transform 0.3s ease;
 }
 
+
 .modal-close:hover {
   background-color: #ffffff;
 
@@ -1969,6 +2293,7 @@ a:hover {
 
   transform: rotate(90deg);
 }
+
 
 
 /* =====================================================
@@ -1984,21 +2309,25 @@ a:hover {
       120px;
   }
 
+
   .work-content {
     grid-template-columns: 65px 1fr;
 
     padding: 30px 25px;
   }
 
+
   .work-number {
     font-size: 3.5rem;
   }
+
 
   .work-action {
     padding: 25px 15px;
   }
 
 }
+
 
 
 /* =====================================================
@@ -2011,8 +2340,30 @@ a:hover {
     padding: 80px 25px 100px;
   }
 
+
   .works-header {
-    margin-bottom: 55px;
+    margin-bottom: 80px;
+  }
+
+
+  /* GROUP HEADER */
+
+  .works-group-header {
+    grid-template-columns: 80px 1fr;
+
+    gap: 20px;
+  }
+
+
+  .works-group-number {
+    font-size: 4.5rem;
+  }
+
+
+  .works-group-count {
+    grid-column: 2;
+
+    padding-bottom: 0;
   }
 
 
@@ -2026,13 +2377,16 @@ a:hover {
       minmax(0, 1.15fr);
   }
 
+
   .work-image-area {
     min-height: 280px;
   }
 
+
   .work-photo {
     min-height: 280px;
   }
+
 
   .work-content {
     grid-template-columns: 55px 1fr;
@@ -2040,9 +2394,11 @@ a:hover {
     padding: 30px 25px;
   }
 
+
   .work-number {
     font-size: 3rem;
   }
+
 
   .work-action {
     grid-column: 1 / -1;
@@ -2055,8 +2411,16 @@ a:hover {
     border-left: none;
   }
 
+
   .work-action > span br {
     display: none;
+  }
+
+
+  /* DIVIDER */
+
+  .works-collection-divider {
+    margin: 90px 0;
   }
 
 
@@ -2070,15 +2434,18 @@ a:hover {
     overflow-y: auto;
   }
 
+
   .modal-image-container {
     min-height: 350px;
   }
+
 
   .modal-image {
     max-height: 450px;
   }
 
 }
+
 
 
 /* =====================================================
@@ -2092,11 +2459,12 @@ a:hover {
   }
 
 
-  /* HEADER */
+  /* MAIN HEADER */
 
   .works-header {
-    margin-bottom: 45px;
+    margin-bottom: 70px;
   }
+
 
   .works-eyebrow {
     font-size: 0.58rem;
@@ -2104,11 +2472,13 @@ a:hover {
     letter-spacing: 3px;
   }
 
+
   .works-header h1 {
     font-size: clamp(2.5rem, 12vw, 3.5rem);
 
     letter-spacing: -2px;
   }
+
 
   .works-intro {
     max-width: 420px;
@@ -2117,15 +2487,62 @@ a:hover {
   }
 
 
-  /* PROJECT */
+  /* =================================================
+     GROUP HEADER
+  ================================================= */
+
+  .works-group-header {
+    display: block;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 25px;
+  }
+
+
+  .works-group-number {
+    margin-bottom: 20px;
+
+    font-size: 4rem;
+
+    letter-spacing: -3px;
+  }
+
+
+  .works-group-title p {
+    margin-bottom: 8px;
+
+    font-size: 0.52rem;
+  }
+
+
+  .works-group-title h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+
+    letter-spacing: -2px;
+  }
+
+
+  .works-group-count {
+    margin-top: 20px;
+
+    font-size: 0.52rem;
+  }
+
+
+  /* =================================================
+     PROJECTS
+  ================================================= */
 
   .works-container {
     gap: 12px;
   }
 
+
   .work-box {
     display: block;
   }
+
 
   .work-image-area {
     width: 100%;
@@ -2133,6 +2550,7 @@ a:hover {
 
     min-height: 0;
   }
+
 
   .work-photo {
     width: 100%;
@@ -2142,7 +2560,26 @@ a:hover {
   }
 
 
-  /* INFORMATION */
+  /* VERTICAL POSTERS */
+
+  .poster-project .work-image-area {
+    height: 330px;
+  }
+
+
+  .poster-project .work-photo {
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+
+    object-fit: contain;
+  }
+
+
+  /* =================================================
+     INFORMATION
+  ================================================= */
 
   .work-content {
     display: grid;
@@ -2154,20 +2591,25 @@ a:hover {
     padding: 25px 20px;
   }
 
+
   .work-number {
     font-size: 2.5rem;
   }
 
+
   .work-information h2 {
     font-size: 1.4rem;
   }
+
 
   .work-description {
     font-size: 0.8rem;
   }
 
 
-  /* VIEW */
+  /* =================================================
+     VIEW PROJECT
+  ================================================= */
 
   .work-action {
     display: flex;
@@ -2177,11 +2619,14 @@ a:hover {
     padding: 12px 20px;
 
     border-top: 1px solid #292929;
+    border-left: none;
   }
+
 
   .work-action > span {
     font-size: 0.6rem;
   }
+
 
   .work-arrow {
     width: 36px;
@@ -2191,19 +2636,60 @@ a:hover {
   }
 
 
-  /* MODAL */
+  /* =================================================
+     COLLECTION DIVIDER
+  ================================================= */
+
+  .works-collection-divider {
+    margin: 75px 0;
+
+    gap: 10px;
+  }
+
+
+  .works-collection-divider span {
+    font-size: 0.47rem;
+
+    letter-spacing: 1px;
+  }
+
+
+  /* =================================================
+     END
+  ================================================= */
+
+  .works-end {
+    margin-top: 70px;
+
+    gap: 10px;
+  }
+
+
+  .works-end span {
+    font-size: 0.48rem;
+
+    letter-spacing: 1px;
+  }
+
+
+  /* =================================================
+     MODAL
+  ================================================= */
 
   .art-modal {
     padding: 15px;
   }
 
+
   .modal-content {
     max-height: 90vh;
   }
 
+
   .modal-image-container {
     min-height: 230px;
   }
+
 
   .modal-image {
     height: 230px;
@@ -2211,13 +2697,16 @@ a:hover {
     object-fit: contain;
   }
 
+
   .modal-info {
     padding: 30px 22px;
   }
 
+
   .modal-info h2 {
     font-size: 1.8rem;
   }
+
 
   .modal-close {
     top: 12px;
@@ -2232,6 +2721,7 @@ a:hover {
 }
 
 
+
 /* =====================================================
    VERY SMALL MOBILE
 ===================================================== */
@@ -2243,9 +2733,16 @@ a:hover {
     padding-right: 12px;
   }
 
+
   .work-image-area {
     height: 200px;
   }
+
+
+  .poster-project .work-image-area {
+    height: 300px;
+  }
+
 
   .work-content {
     grid-template-columns: 1fr;
@@ -2253,34 +2750,47 @@ a:hover {
     padding: 22px 18px;
   }
 
-  .work-number {
-    font-size: 2rem;
 
+  .work-number {
     margin-bottom: 5px;
+
+    font-size: 2rem;
   }
+
 
   .work-tags span {
     font-size: 0.58rem;
   }
 
+
+  .works-group-number {
+    font-size: 3.5rem;
+  }
+
+
+  .works-collection-divider span:last-child {
+    display: none;
+  }
+
+
+  .works-collection-divider {
+    grid-template-columns: auto 1fr;
+  }
+
+
+  .works-end span:last-child {
+    display: none;
+  }
+
+
+  .works-end {
+    grid-template-columns: auto 1fr;
+  }
+
+
   .modal-info {
     padding: 25px 18px;
   }
-
-/* =====================================================
-   COFFEE POSTER
-   Keep vertical poster fully visible
-===================================================== */
-
-.coffee-project .work-image-area {
-  background-color: #160b06;
-}
-
-.coffee-project .work-photo {
-  object-fit: contain;
-  object-position: center;
-  padding: 8px;
-}
 
 }
 /* =====================================================
