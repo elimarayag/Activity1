@@ -1582,27 +1582,26 @@ a:hover {
 
     align-items: stretch;
 
-    gap: 70px;
+    gap: 55px;
 
     min-height: 0;
 
-    padding: 25px 0 90px;
+    padding: 10px 0 90px;
   }
 
 
-  /* INTRO FIRST */
-
-  .profile-right {
-    order: 1;
-  }
-
+  /* PORTRAIT FIRST */
 
   .profile-left {
-    order: 2;
-
+    order: 1;
     width: 88%;
+    max-width: 430px;
+    margin: 0 auto;
+  }
 
-    margin-left: auto;
+  .profile-right {
+    order: 2;
+    width: 100%;
   }
 
 
@@ -1710,17 +1709,20 @@ a:hover {
   /* PHOTO */
 
   .profile-photo-wrap {
-    max-width: none;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 7px;
   }
-
 
   .profile-img {
     width: 100%;
     height: auto;
-
     aspect-ratio: 4 / 5;
-
+    display: block;
     object-fit: cover;
+    object-position: center;
+    margin: 0;
   }
 
 
@@ -1876,7 +1878,9 @@ a:hover {
 
 
   .profile-left {
-    width: 92%;
+    width: 90%;
+    max-width: 340px;
+    margin: 0 auto;
   }
 
 
@@ -1901,6 +1905,20 @@ a:hover {
   }
 
 }
+
+/* =========================================================
+   PROFILE ORDER — KEEP PORTRAIT FIRST ON STACKED DEVICES
+========================================================= */
+@media screen and (max-width: 1000px) {
+  .profile-left {
+    order: 1;
+  }
+
+  .profile-right {
+    order: 2;
+  }
+}
+
 /* =========================================================
    ABOUT PAGE
 ========================================================= */
