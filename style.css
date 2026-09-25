@@ -582,8 +582,6 @@ a:hover {
 
   border-radius: 0;
 
-  filter: grayscale(100%) contrast(1.08);
-
   box-shadow: none;
 
   transition:
@@ -2163,7 +2161,6 @@ a:hover {
 
   object-fit: cover;
 
-  filter: grayscale(100%) contrast(1.08);
 }
 
 
