@@ -389,215 +389,846 @@ a:hover {
 
 }
 
-/*PROFILE SECTION*/
+/* =========================================================
+   PROFILE — HOME HERO
+========================================================= */
+
 #profile {
-  background-color: #0d0d0d;
-  color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 200px 50px;
-}
+  position: relative;
 
-.profile-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  gap: 40px;
-}
-
-.profile-left {
-  flex: 1;
-  min-width: 280px;
-  text-align: center;
-}
-
-.profile-img {
-  width: 280px;
-  height: 350px;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.icon-link {
-  display: inline-block;
-  background-color: #1c1c1c;
-  color: #ffffff;
-  margin: 5px;
-  padding: 10px 12px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.icon-link:hover {
-  background-color: #333;
-  color: #00aced;
-}
-
-.profile-right {
-  flex: 2;
-  min-width: 300px;
-}
-
-.greeting {
-  font-size: 1rem;
-  color: #aaaaaa;
-  margin-bottom: 10px;
-}
-
-.profile-right h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.profile-right h2 {
-  font-size: 1.8rem;
-  margin: 10px 0 20px;
-}
-
-.details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-size: 0.95rem;
-  color: #bbbbbb;
-  margin-bottom: 20px;
-}
-
-.details p span {
-  margin-right: 5px;
-}
-
-.bio {
-  color: #cccccc;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-.profile-right h3 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-}
-
-/* =====================================================
-   SERVICES / WHAT I DO
-===================================================== */
-
-.services {
   width: 100%;
+  min-height: 100vh;
 
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 150px 35px 0;
 
-  gap: 1px;
+  background:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(255, 255, 255, 0.045),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 65%,
+      rgba(255, 255, 255, 0.025),
+      transparent 25%
+    ),
+    #090909;
 
-  margin-top: 35px;
+  color: #f4f4f4;
 
-  background-color: #343434;
-
-  border: 1px solid #343434;
+  font-family: "Segoe UI", sans-serif;
 
   overflow: hidden;
 }
 
 
-/* =====================================================
-   SERVICE CARD
-===================================================== */
+#profile *,
+#profile *::before,
+#profile *::after {
+  box-sizing: border-box;
+}
+
+
+.profile-wrapper {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+
+/* =========================================================
+   BACKGROUND TYPOGRAPHY
+========================================================= */
+
+.profile-bg-name {
+  position: absolute;
+
+  top: 60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: rgba(255, 255, 255, 0.018);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(12rem, 26vw, 28rem);
+
+  line-height: 0.8;
+
+  letter-spacing: -25px;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+.profile-bg-number {
+  position: absolute;
+
+  top: 110px;
+  right: 4%;
+
+  color: #151515;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(7rem, 13vw, 13rem);
+
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.profile-hero {
+  width: 100%;
+  min-height: 720px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.72fr)
+    minmax(0, 1.28fr);
+
+  align-items: center;
+
+  gap: clamp(65px, 8vw, 125px);
+
+  padding: 25px 0 120px;
+}
+
+
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
+.profile-left {
+  position: relative;
+
+  min-width: 0;
+}
+
+
+.profile-photo-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 390px;
+
+  margin: 0 auto;
+
+  padding: 9px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #333;
+
+  transform: rotate(-1.5deg);
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease;
+}
+
+
+.profile-photo-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  top: 25px;
+  left: -27px;
+
+  width: 80px;
+  height: 80px;
+
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+
+  pointer-events: none;
+}
+
+
+.profile-photo-wrap:hover {
+  transform: rotate(0deg) translateY(-6px);
+
+  border-color: #666;
+}
+
+
+.profile-img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 0;
+
+  filter: grayscale(100%) contrast(1.08);
+
+  box-shadow: none;
+
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+.profile-photo-wrap:hover .profile-img {
+  filter: grayscale(20%) contrast(1.03);
+}
+
+
+.profile-photo-tag {
+  position: absolute;
+
+  left: -35px;
+  bottom: 35px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 12px 15px;
+
+  background: #f1f1f1;
+
+  color: #111;
+
+  font-family: monospace;
+
+  font-size: 0.55rem;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+
+  transform: rotate(1.5deg);
+}
+
+
+.photo-corner {
+  position: absolute;
+
+  width: 17px;
+  height: 17px;
+}
+
+
+.corner-top {
+  top: -8px;
+  right: -8px;
+
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+}
+
+
+.corner-bottom {
+  right: -8px;
+  bottom: -8px;
+
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.social-row {
+  width: 100%;
+  max-width: 390px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 28px auto 0;
+}
+
+
+.social-label {
+  color: #555;
+
+  font-family: monospace;
+
+  font-size: 0.52rem;
+
+  letter-spacing: 2.5px;
+}
+
+
+.social-icons {
+  display: flex;
+
+  gap: 7px;
+
+  margin: 0;
+}
+
+
+.icon-link {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border: 1px solid #353535;
+  border-radius: 50%;
+
+  color: #888;
+
+  text-decoration: none;
+
+  font-size: 0.85rem;
+
+  transition: 0.3s ease;
+}
+
+
+.icon-link:hover {
+  background: #f1f1f1;
+
+  border-color: #f1f1f1;
+
+  color: #090909;
+
+  transform: translateY(-4px);
+}
+
+
+
+/* =========================================================
+   PROFILE INTRO
+========================================================= */
+
+.profile-right {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+.profile-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+
+  color: #626262;
+
+  font-family: monospace;
+
+  font-size: 0.56rem;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #b7b7b7;
+
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.04);
+}
+
+
+.greeting {
+  margin: 0 0 13px;
+
+  color: #6b6b6b;
+
+  font-family: monospace;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+
+.profile-right h1 {
+  margin: 0;
+
+  color: #f1f1f1;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(4.6rem, 8vw, 8rem);
+
+  font-weight: 400;
+
+  line-height: 0.78;
+
+  letter-spacing: -7px;
+}
+
+
+.profile-right h1 span,
+.profile-right h1 em {
+  display: block;
+}
+
+
+.profile-right h1 em {
+  margin-left: 8%;
+
+  color: #626262;
+
+  font-weight: 400;
+}
+
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.profile-role {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 45px 0 35px 12%;
+}
+
+
+.role-line {
+  width: 55px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #444;
+}
+
+
+.profile-role h2 {
+  margin: 0;
+
+  color: #c5c5c5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+
+.profile-role h2 em {
+  display: block;
+
+  color: #626262;
+
+  font-weight: 400;
+}
+
+
+
+/* =========================================================
+   BIO
+========================================================= */
+
+.bio {
+  max-width: 600px;
+
+  margin: 0 0 40px 12%;
+
+  color: #828282;
+
+  font-size: 0.9rem;
+
+  line-height: 1.85;
+}
+
+
+.bio strong {
+  color: #c5c5c5;
+
+  font-weight: 500;
+}
+
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.profile-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin: 0 0 60px 12%;
+}
+
+
+.profile-primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 15px 18px;
+
+  background: #f1f1f1;
+
+  border: 1px solid #f1f1f1;
+
+  color: #0a0a0a;
+
+  font-family: monospace;
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+
+.profile-primary-btn span:last-child {
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+
+.profile-primary-btn:hover {
+  background: transparent;
+
+  color: #fff;
+}
+
+
+.profile-primary-btn:hover span:last-child {
+  transform: translate(4px, -4px);
+}
+
+
+.profile-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #444;
+
+  color: #777;
+
+  font-family: monospace;
+
+  font-size: 0.56rem;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+
+.profile-secondary-btn:hover {
+  color: #fff;
+
+  border-color: #fff;
+}
+
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.profile-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
+
+
+.profile-detail {
+  min-width: 0;
+
+  padding: 20px;
+
+  border-right: 1px solid #292929;
+}
+
+
+.profile-detail:last-child {
+  border-right: none;
+}
+
+
+.profile-detail > span {
+  color: #3d3d3d;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 1.1rem;
+}
+
+
+.profile-detail p {
+  margin: 25px 0 6px;
+
+  color: #555;
+
+  font-family: monospace;
+
+  font-size: 0.48rem;
+
+  letter-spacing: 2px;
+}
+
+
+.profile-detail strong {
+  color: #a9a9a9;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 0.95rem;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.profile-services-section {
+  width: 100%;
+
+  padding: 125px 0;
+
+  border-top: 1px solid #242424;
+}
+
+
+.services-heading {
+  display: grid;
+
+  grid-template-columns: 1fr 0.55fr;
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 60px;
+}
+
+
+.services-eyebrow {
+  margin: 0 0 13px;
+
+  color: #555;
+
+  font-family: monospace;
+
+  font-size: 0.55rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+
+.services-heading h2 {
+  margin: 0;
+
+  color: #e8e8e8;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  letter-spacing: -6px;
+}
+
+
+.services-heading h2 em {
+  color: #5b5b5b;
+
+  font-weight: 400;
+}
+
+
+.services-intro {
+  max-width: 390px;
+
+  margin: 0 0 5px auto;
+
+  color: #777;
+
+  font-size: 0.85rem;
+
+  line-height: 1.75;
+}
+
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1px;
+
+  margin: 0;
+
+  background: #333;
+
+  border: 1px solid #333;
+
+  overflow: hidden;
+}
+
 
 .services .service-card {
   position: relative;
 
   min-width: 0;
-  min-height: 190px;
+  min-height: 260px;
 
   display: flex;
   flex-direction: column;
 
   justify-content: space-between;
 
-  padding: 24px;
+  padding: 28px;
 
-  background-color: #111111;
+  background: #0d0d0d;
 
-  color: #ffffff;
-
-  border-radius: 0;
-
-  text-align: left;
+  color: #fff;
 
   overflow: hidden;
 
-  cursor: default;
-
   transition:
-    background-color 0.35s ease,
+    background 0.35s ease,
     transform 0.35s ease;
 }
 
-
-/* subtle light effect */
 
 .services .service-card::before {
   content: "";
 
   position: absolute;
 
-  width: 150px;
-  height: 150px;
+  top: -120px;
+  right: -120px;
 
-  top: -100px;
-  right: -100px;
+  width: 180px;
+  height: 180px;
 
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.045);
 
-  transition:
-    width 0.5s ease,
-    height 0.5s ease,
-    top 0.5s ease,
-    right 0.5s ease;
-}
-
-
-.services .service-card:hover::before {
-  width: 260px;
-  height: 260px;
-
-  top: -120px;
-  right: -90px;
+  transition: 0.6s ease;
 }
 
 
 .services .service-card:hover {
-  background-color: #181818;
+  background: #151515;
+}
+
+
+.services .service-card:hover::before {
+  width: 330px;
+  height: 330px;
+
+  top: -160px;
+  right: -120px;
 }
 
 
 
-/* =====================================================
-   NUMBER
-===================================================== */
+/* =========================================================
+   SERVICE NUMBER
+========================================================= */
 
 .service-number {
   position: absolute;
 
-  top: 18px;
-  right: 20px;
+  top: 22px;
+  right: 24px;
 
-  color: #555555;
+  color: #444;
 
   font-family: monospace;
 
-  font-size: 0.65rem;
+  font-size: 0.58rem;
 
   letter-spacing: 1px;
 
@@ -606,171 +1237,199 @@ a:hover {
 
 
 .service-card:hover .service-number {
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 
 
-/* =====================================================
-   ICON
-===================================================== */
+/* =========================================================
+   SERVICE ICON
+========================================================= */
 
 .service-icon {
   position: relative;
 
   z-index: 2;
 
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  border: 1px solid #3d3d3d;
-
+  border: 1px solid #3b3b3b;
   border-radius: 50%;
 
-  background-color: #161616;
+  background: #121212;
 
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 
-  transition:
-    transform 0.4s ease,
-    background-color 0.4s ease,
-    border-color 0.4s ease;
+  transition: 0.4s ease;
 }
 
 
 .service-card:hover .service-icon {
-  transform: rotate(-8deg) scale(1.08);
+  background: #f1f1f1;
 
-  background-color: #ffffff;
+  border-color: #f1f1f1;
 
-  border-color: #ffffff;
+  transform: rotate(-8deg);
+
+  filter: grayscale(100%);
 }
 
 
 
-/* =====================================================
-   TEXT
-===================================================== */
+/* =========================================================
+   SERVICE TEXT
+========================================================= */
 
 .service-text {
   position: relative;
 
   z-index: 2;
 
-  margin-top: 30px;
+  margin-top: auto;
+
+  padding-top: 65px;
 }
 
 
 .service-label {
   display: block;
 
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 
-  color: #666666;
+  color: #5f5f5f;
 
-  font-size: 0.55rem;
+  font-family: monospace;
+
+  font-size: 0.5rem;
   font-weight: 700;
 
   letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  transition: color 0.3s ease;
-}
-
-
-.service-card:hover .service-label {
-  color: #999999;
 }
 
 
 .service-text h3 {
-  max-width: 190px;
+  max-width: 240px;
 
   margin: 0;
 
-  color: #f5f5f5;
+  color: #e6e6e6;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 1.25rem;
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+
   font-weight: 400;
 
-  line-height: 1.15;
+  line-height: 1;
 
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+
+.service-text h3 em {
+  display: block;
+
+  color: #666;
+
+  font-weight: 400;
 }
 
 
 .service-card:hover .service-text h3 {
-  color: #ffffff;
-
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 
 
-/* =====================================================
-   ARROW
-===================================================== */
+/* =========================================================
+   GRAPHIC TOOLS
+========================================================= */
+
+.service-tools {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 18px;
+}
+
+
+.service-tools span {
+  padding: 4px 7px;
+
+  border: 1px solid #333;
+  border-radius: 100px;
+
+  color: #666;
+
+  font-family: monospace;
+
+  font-size: 0.44rem;
+
+  letter-spacing: 0.5px;
+}
+
+
+
+/* =========================================================
+   SERVICE ARROW
+========================================================= */
 
 .service-arrow {
   position: absolute;
 
-  right: 20px;
-  bottom: 20px;
+  right: 25px;
+  bottom: 25px;
 
-  z-index: 2;
+  z-index: 3;
 
-  color: #555555;
+  color: #555;
 
   font-size: 1rem;
 
   opacity: 0;
 
-  transform: translate(-5px, 5px);
+  transform: translate(-6px, 6px);
 
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 
 .service-card:hover .service-arrow {
+  color: #fff;
+
   opacity: 1;
 
-  color: #ffffff;
-
-  transform: translate(0, 0);
+  transform: none;
 }
 
 
 
-/* =====================================================
-   ANIMATION CARD SPECIAL EFFECT
-===================================================== */
+/* =========================================================
+   ANIMATION CARD
+========================================================= */
 
-.service-card:last-child .service-icon {
+.animation-card .service-icon {
   font-family: Georgia, "Times New Roman", serif;
 
   font-size: 1.6rem;
 }
 
 
-.service-card:last-child:hover .service-icon {
-  animation: animationSpark 1.2s ease-in-out infinite;
+.animation-card:hover .service-icon {
+  animation: profileSpark 1.2s ease-in-out infinite;
 }
 
 
-@keyframes animationSpark {
+@keyframes profileSpark {
 
   0%,
   100% {
@@ -778,117 +1437,467 @@ a:hover {
   }
 
   50% {
-    transform: rotate(90deg) scale(1.12);
+    transform: rotate(90deg) scale(1.1);
   }
 
 }
 
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* =========================================================
+   BOTTOM MARQUEE
+========================================================= */
 
-@media screen and (max-width: 900px) {
+.profile-marquee {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  padding: 28px 0;
+
+  border-top: 1px solid #292929;
+
+  color: #454545;
+
+  font-family: monospace;
+
+  font-size: 0.54rem;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+.profile-marquee i {
+  color: #292929;
+
+  font-style: normal;
+}
+
+/* =========================================================
+   PROFILE — TABLET
+========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+  #profile {
+    padding: 130px 28px 0;
+  }
+
+
+  .profile-hero {
+    grid-template-columns:
+      minmax(250px, 0.65fr)
+      minmax(0, 1.35fr);
+
+    gap: 50px;
+
+    min-height: 650px;
+  }
+
+
+  .profile-img {
+    height: 430px;
+  }
+
+
+  .profile-right h1 {
+    font-size: clamp(4rem, 8vw, 6rem);
+
+    letter-spacing: -5px;
+  }
+
+
+  .profile-role {
+    margin-left: 5%;
+  }
+
+
+  .bio {
+    margin-left: 5%;
+  }
+
+
+  .profile-actions {
+    margin-left: 5%;
+  }
+
 
   .services {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
 
-  .services .service-card {
-    min-height: 180px;
+  .services-heading {
+    grid-template-columns: 1fr 0.7fr;
 
-    padding: 22px;
+    gap: 40px;
   }
 
 }
 
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   PROFILE — MOBILE
+========================================================= */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
+
+  #profile {
+    padding: 105px 18px 0;
+  }
+
+
+  .profile-bg-name {
+    top: 90px;
+
+    font-size: 11rem;
+
+    letter-spacing: -12px;
+  }
+
+
+  .profile-bg-number {
+    top: 105px;
+    right: -5px;
+
+    font-size: 7rem;
+  }
+
+
+  /* HERO */
+
+  .profile-hero {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 70px;
+
+    min-height: 0;
+
+    padding: 25px 0 90px;
+  }
+
+
+  /* INTRO FIRST */
+
+  .profile-right {
+    order: 1;
+  }
+
+
+  .profile-left {
+    order: 2;
+
+    width: 88%;
+
+    margin-left: auto;
+  }
+
+
+  .profile-status {
+    margin-bottom: 25px;
+  }
+
+
+  .greeting {
+    font-size: 0.55rem;
+
+    letter-spacing: 3px;
+  }
+
+
+  .profile-right h1 {
+    font-size: clamp(4rem, 19vw, 6rem);
+
+    line-height: 0.8;
+
+    letter-spacing: -5px;
+  }
+
+
+  .profile-right h1 em {
+    margin-left: 5%;
+  }
+
+
+  .profile-role {
+    gap: 13px;
+
+    margin: 35px 0 30px 8%;
+  }
+
+
+  .role-line {
+    width: 35px;
+  }
+
+
+  .profile-role h2 {
+    font-size: 1.5rem;
+  }
+
+
+  .bio {
+    width: 88%;
+
+    margin: 0 0 35px 8%;
+
+    font-size: 0.82rem;
+
+    line-height: 1.75;
+  }
+
+
+  /* BUTTONS */
+
+  .profile-actions {
+    width: 92%;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin: 0 0 55px 8%;
+  }
+
+
+  .profile-primary-btn {
+    gap: 25px;
+
+    padding: 14px 16px;
+  }
+
+
+  /* DETAILS */
+
+  .profile-details {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+
+  .profile-detail {
+    padding: 15px 10px;
+  }
+
+
+  .profile-detail p {
+    margin-top: 18px;
+
+    font-size: 0.42rem;
+
+    letter-spacing: 1px;
+  }
+
+
+  .profile-detail strong {
+    font-size: 0.75rem;
+  }
+
+
+  /* PHOTO */
+
+  .profile-photo-wrap {
+    max-width: none;
+  }
+
+
+  .profile-img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+  }
+
+
+  .profile-photo-tag {
+    left: -25px;
+
+    font-size: 0.46rem;
+  }
+
+
+  /* SERVICES */
+
+  .profile-services-section {
+    padding: 90px 0;
+  }
+
+
+  .services-heading {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+
+  .services-heading h2 {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+
+    letter-spacing: -4px;
+  }
+
+
+  .services-intro {
+    width: 82%;
+
+    margin: 35px 0 0 auto;
+
+    font-size: 0.8rem;
+  }
+
 
   .services {
     grid-template-columns: 1fr;
-
-    gap: 1px;
-
-    margin-top: 30px;
   }
 
 
   .services .service-card {
-    min-height: 145px;
+    min-height: 210px;
 
-    padding: 20px;
-  }
-
-
-  .service-icon {
-    width: 42px;
-    height: 42px;
-
-    font-size: 1.1rem;
+    padding: 23px;
   }
 
 
   .service-text {
-    margin-top: 25px;
+    padding-top: 50px;
   }
 
 
   .service-text h3 {
-    max-width: 230px;
-
-    font-size: 1.15rem;
+    font-size: 1.7rem;
   }
 
 
   .service-arrow {
     opacity: 1;
 
-    right: 20px;
-    bottom: 20px;
-
     transform: none;
+  }
+
+
+  /* MARQUEE */
+
+  .profile-marquee {
+    justify-content: flex-start;
+
+    gap: 17px;
+
+    overflow: hidden;
+
+    font-size: 0.47rem;
   }
 
 }
 
 
 
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
+/* =========================================================
+   PROFILE — SMALL PHONES
+========================================================= */
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 420px) {
+
+  #profile {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  .profile-right h1 {
+    font-size: clamp(3.5rem, 18vw, 4.7rem);
+
+    letter-spacing: -4px;
+  }
+
+
+  .profile-role {
+    margin-left: 4%;
+  }
+
+
+  .bio {
+    width: 94%;
+
+    margin-left: 4%;
+  }
+
+
+  .profile-actions {
+    width: 96%;
+
+    margin-left: 4%;
+  }
+
+
+  .profile-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .profile-detail {
+    min-height: 100px;
+
+    display: grid;
+
+    grid-template-columns: 35px 75px 1fr;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-right: none;
+    border-bottom: 1px solid #292929;
+  }
+
+
+  .profile-detail:last-child {
+    border-bottom: none;
+  }
+
+
+  .profile-detail p {
+    margin: 0;
+  }
+
+
+  .profile-left {
+    width: 92%;
+  }
+
+
+  .profile-photo-tag {
+    left: -18px;
+  }
+
+
+  .services-heading h2 {
+    font-size: 3.8rem;
+  }
+
 
   .services .service-card {
-    min-height: 135px;
-
-    padding: 18px;
+    min-height: 190px;
   }
 
 
-  .service-number {
-    top: 16px;
-    right: 17px;
-  }
-
-
-  .service-text h3 {
-    font-size: 1.05rem;
-  }
-
-
-  .service-label {
-    font-size: 0.5rem;
-
-    letter-spacing: 1.5px;
+  .profile-marquee span:nth-of-type(4),
+  .profile-marquee i:nth-of-type(3) {
+    display: none;
   }
 
 }
